@@ -1,0 +1,2429 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<img onclick="startremove()" class="icon_fold" style="cursor:pointer; position:fixed;top:50px; left:-56px;" src="images/icon_fold.png" width="56" height="47" />
+<div class="menu">
+	<div class="menu_fold" onclick="startmove()">
+    <img src="images/fold.png" width="13" height="13" />
+    </div>
+    <div class="menu_mid">
+    	<div class="menu_mid_in">
+        	<div class="mid_people" style="position:relative;" onmouseover="peopleover()" onmouseout="peopleout()">
+            	<a href="https://user.qunar.com/passport/register.jsp?ret=https%3A%2F%2Fwww.qunar.com%2F%23"><div class="mid_people_in" style="display:none;position:absolute; top:0px; left:35px;">
+                	<div class="mid_people_in_icon"></div>
+                    <span>加入会员，立即开始精彩旅程！</span>
+                </div></a>
+        		<div class="mid_people_icon"></div>
+          </div>
+            <img style="margin-top:30px;" src="images/people_bottom.png" width="24" height="2" />
+			<div class="mid_message" onmouseover="mesover()" onmouseout="mesout()">
+   	    		<div class="mid_message_icon"></div>消息
+                <!--<div class="login" style=" z-index:-1;width: 300px; height: 313px; border: 1px solid #af5265; border-left: none; padding-top: 26px; padding-left: 50px; background:#fff; position:absolute; top:0px; left:0px;">
+			<div class="login_top">
+			<label><input name="Fruit" type="radio" value="check" checked="checked" />帐号登录</label>
+			<label style="margin-left: 25px;"><input name="Fruit" type="radio" value="check" />短信验证码登录</label>
+			</div>
+			<div class="login_middle">
+				<input type="text" placeholder="手机号/邮箱/用户名" value="" class="admin" style=" border: 1px solid #CCCCCC; background-image:url(images/name.jpg);width: 214px; background-repeat: no-repeat; height: 30px; margin-top: 20px;padding-left:38px;" />
+				<input type="password" name="" id="" value="" placeholder="请输入密码" style="color:#787878; border: 1px solid #CCCCCC; background-image:url(images/password.jpg);width: 214px; background-repeat: no-repeat; height: 30px; margin-top: 20px;padding-left:38px;" />
+				<div class="Verification" style="margin-top: 20px;">
+				<input type="text" name="" id="" value="" style="border: 1px solid #CCCCCC;width: 143px;height: 30px; float: left;" />
+				<img src="images/image.jpg" style="float: left; margin-left: 20px; width: 85px; height: 34px;"/>
+				<span style="line-height: 34px;  font-size: 14px; margin-left: 5px;"><a style="color:#0800b4; text-decoration: none;" href="javascript:;">换一张</a></span>
+				</div>
+			</div>
+			<div class="login_bottom" style="margin-top: 25px;">
+				<input type="checkbox" name="" id="" value="" />三个月内自动登录
+				<span style="  font-size: 14px; margin-left: 30px;"><a style="color:#0800b4; text-decoration: none;" href="javascript:;">忘记密码？</a></span>
+				<input type="button" id="login" value="登录" style="width: 249px; height: 30px; margin-top: 15px; background-color: #ff8d00; border: none;" />
+				<br />
+				<span style="  font-size: 14px; margin-left: 195px; line-height: 30px;"><a style="color:#0800b4; text-decoration: none;" href="javascript:;">免费注册</a></span>
+			</div>
+		</div>-->
+            </div>
+            <div class="mid_shop" onmouseover="shopover()" onmouseout="shopout()">
+            	<div class="mid_shop_icon"></div>订单
+            </div>
+            <div class="mid_money" onmouseover="monover()" onmouseout="monout()">
+            	<div class="mid_money_icon"></div>账户
+            </div>
+        </div>
+    </div>
+    <div class="menu_foot">
+    	<div class="menu_advice" onmouseover="advover()" onmouseout="advout()">
+    		<div class="advice_icon"></div>建议
+    	</div>
+    	<div class="menu_qrcode" style="position:relative;" onmouseover="codeover()" onmouseout="codeout()">
+        	<div class="qrcode_icon"></div>扫码
+            <a href="http://app.qunar.com/?from=usertoolbar"><img class="erweima" src="images/sidecode_v3.png" style=" display:none;border:1px solid #999; border-left:none;position:absolute; left:35px; top:-70px; z-index:3;" width="135" height="178" /></a> 
+        </div>
+        <div class="scroll_top">
+        	<div class="scroll_top_icon"></div>置顶
+        </div>
+    </div>
+</div>
+<div id="top">
+	<div id="top_in">
+    	<div id="top_nav">
+        	
+            <ul class="top_nav_ul">
+            	<li style="position:relative; margin-left:10px;"><div style="margin-top:8px;" class="dt"></div>
+           	    <img style="float:left; margin:10px -5px 0 10px;" src="images/top_mes.jpg" width="10" height="8" /><a href="#">消息<img style=" margin:13px 0 2px 3px; float:right;" src="images/top_icon.jpg" width="7" height="4" /></a>
+                <ul class="droplist" style="display:none">
+                <li>机票订单</li>
+                <li>酒店订单</li>
+                <li>公寓订单</li>
+                <li>团购订单</li>
+                <li>度假订单</li>
+                <li>门票订单</li>
+                <li>火车票订单</li>
+                <li>汽车票订单</li>
+                <li>车车订单</li>
+                <li>Q商城订单</li>
+                <li>当地人订单</li>
+                <li>金融订单</li>
+                <li>礼品卡订单</li>
+                </ul>
+                </li>
+                <li class="top_order" style=" margin-left:10px;"><div style="margin-top:8px;" class="dt"></div><a href="#">查看订单<img style=" margin:13px 0 2px 3px; float:right;" src="images/top_icon.jpg" width="7" height="4" /></a></li>
+                <li style=" margin-left:10px;"><div style="margin-top:8px;" class="dt"></div><a href="#">积分商场</a></li>
+                <li style=" margin-left:10px;"><div style="margin-top:8px;" class="dt"></div><a href="#">联系客服</a></li>
+                <li style=" margin-left:10px;"><div style="margin-top:8px;" class="dt"></div><img style="margin-left:10px;"src="images/ico_en_v1.png" width="19" height="13" /><a href="#">In English</a></li>
+            </ul>
+            <p><span>请</span><a href="#">登录</a><span>或</span><a href="#">免费注册</a><p>
+            
+      	</div>
+        
+        
+        
+    	<div id="top_header">
+        	<ul>
+            	<li><a style="color:#0a8398" href="#">首页</a></li>
+                <li><a href="#">机票</a></li>
+                <li><a href="#">酒店</a></li>
+                <li><a href="#">团购</a></li>
+                <li><a href="#">度假</a></li>
+                <li><a href="#">门票</a></li>
+                <li><a href="#">火车票</a></li>
+                <li><a href="#">攻略</a></li>
+                <li><a href="#">公寓</a></li>
+                <li><a href="#">当地人</a></li>
+                <li><a href="#">车车</a></li>
+                <li><a href="#">汽车票</a></li>
+                <li><a href="#">海外</a></li>
+                <li><a href="#">保险</a></li>
+                <li><a href="#">金融</a></li>
+                <li><a href="#">会场</a></li>
+            </ul>
+        <img style="float:left; margin:17px 0 0 20px;" src="https://t.qunar.com/count/headerImageHd" width="141" height="37" /></div>
+    </div>
+</div>
+
+ <div class="clr"></div>
+
+
+
+<div id="page">
+	<div id="section_one">
+   	  <div id="sec_l">
+      		<ul id="sec_l_ul">
+            	<li class="li_air" onclick="blo1()">机票</li>
+                <li class="li_hotel" onclick="blo2()">酒店</li>
+                <li class="li_train" onclick="blo3()">火车票</li>
+                <li class="li_holiday" onclick="blo4()">度假</li>
+                <li class="li_menpiao" onclick="blo5()">门票</li>
+                <li class="li_groupbuy" onclick="blo6()">团购</li>
+                <li class="li_carcar" onclick="blo7()" style="height:36px;">车车</li>
+                <li class="li_freego" onclick="blo8()" style="height:36px;">自由行</li>
+            </ul>
+            
+  <div class="block1">
+            	<div class="blo_nav1">
+                	<ul>
+                   	  <li class="blo_nav1_li1" onclick="changgenav1()" style="border-bottom:2px solid #098cb5; font-weight:bold;"><a style=" color:#000" href="javascript:;">国内机票</a></li>
+                      <li class="blo_nav1_li2" onclick="changgenav2()" style="width:150px;"><a href="javascript:;">国际·港澳台机票</a></li>
+                    </ul>
+                    <span class="blo_nav1_span"><img style="margin-right:5px;" src="images/blo_nav1_pic1.jpg" width="14" height="13" /><a href="javascript:;">出票状态查询</a>
+              		<img style="margin-right:5px; margin-left:15px;" src="images/blo_nav1_pic2.jpg" width="12" height="15" /><a href="javascript:;">退票改签</a></span> 
+       	</div>
+        <!--国内机票-->
+<div class="blo_in1" style=" display:block;">
+                	<input style=" position:absolute; top:20px;left:28px;" class="single_btn" name="single_btn1" type="radio" value="单程" checked="checked" onclick="text4return()" /><span style=" position:absolute; top:19px; left:45px;">单程</span>
+                    <input style=" position:absolute; top:21px;left:102px;" class="single_btn" name="single_btn1" type="radio" value="往返" onclick="text4change()" /><span style=" position:absolute; top:19px; left:120px;">往返</span>
+                    
+                    <!--第一个文本框-->
+					<div style=" position:relative; top:55px; left:28px;" class="text">
+                    	<div class="text_l"><a href="javascript:;">出发</a></div>
+                    	<input class="text1" style="border-left:none;" name="" type="text" value="杭州" />
+                    	<a href="javascript:;"><img style=" position:absolute; top:12px; right:10px;" src="images/calendar.jpg" width="16" height="13" /></a>
+                    </div>
+                    
+                    <!--第二个文本框-->
+		  <div style=" position:relative; top:18px;left:340px;" class="text">
+                    	<div class="text_l"><a href="javascript:;">日期</a></div>
+                    	<input class="ticket_time" id="rili1" style="border-left:none;" name="" type="text" value="" />
+                    	<a href="javascript:;"><img style=" position:absolute; top:12px; right:10px;" src="images/calendar1.jpg" width="16" height="13" /></a>
+                    </div>
+                    
+                    <!--第三个文本框-->
+                    <div style=" position:relative; top:40px; left:28px;" class="text">
+                    	<div class="text_l"><a href="javascript:;">到达</a></div>
+                    	<input class="text3" style="border-left:none;" name="" type="text" placeholder="输入国家/城市/机场" />
+                    	<a href="javascript:;"><img style=" position:absolute; top:12px; right:10px;" src="images/calendar.jpg" width="16" height="13" /></a>
+                    </div>
+                    
+                     <!--第四个文本框-->
+		  <div style="position:relative; top:3px;left:340px;" class="text" id="text4">
+                    	<div class="text_l" id="text_l2" style="border:1px solid #e4e6e5; border-right:none; background:#f5f5f5;"><a style="color:#dfdfdf" href="javascript:;">日期</a></div>
+                    	<input class="ticket_time2" id="rili2" style="border-left:none;; border:1px solid #e4e6e5;" name="" type="text" value="" onclick="text4change()" />
+                    	<a href="javascript:;"><img class="cai" style=" position:absolute; top:12px; right:10px; display:none;" src="images/calendar1.jpg" width="16" height="13"/></a>
+                        <a href="javascript:;"><img class="hui" style=" position:absolute; top:12px; right:10px;" src="images/calendar2.jpg" width="16" height="13"/></a>
+                    </div>
+                    
+                    <!--换的图片-->
+                <a href="javascript:;"><img onmouseover="picchange()" class="change1" style="position:absolute; top:78px; left:268px;" src="images/change.jpg" width="22" height="55" /></a> 
+                <a href="javascript:;"><img onclick="valuechange()" onmouseout="picreturn()" class="change2" style=" display:none;position:absolute; top:78px; left:268px;" src="images/change1.jpg" width="22" height="55" /></a> 
+                
+        <label style=" font-size:12px; font-family:'微软雅黑'; color:#686e6e;position:absolute; bottom:30px; left:28px;">可实时搜索<span style="margin:0 3px; color:#5a6666; font-weight:bold;">28万</span>条国内国际航线</label>
+        <a href="javascript:;"><div onmouseover="searchchange()" onmouseout="searchreturn()" class="search" style="position:absolute; bottom:10px; left:447px;">
+        立即搜索
+        </div></a>
+                </div>
+        <!--国际港澳台机票-->
+ <div class="blo_in2" style=" display:none">
+ 	<input style=" position:absolute; top:20px;left:28px;" class="single_btn" name="single_btn2" type="radio" value="单程" onclick="singleway()" /><span style=" position:absolute; top:19px; left:45px;">单程</span>
+                    <input style=" position:absolute; top:21px;left:102px;" class="single_btn" id="doubleway" name="single_btn2" type="radio" value="往返" checked="checked" onclick="doubleway()" /><span style=" position:absolute; top:19px; left:120px;">往返</span>
+                    <input style=" position:absolute; top:21px;left:182px;" class="single_btn" name="single_btn2" type="radio" value="往返" onclick="intel_search()" /><span style=" position:absolute; top:19px; left:200px;">智能搜索</span>
+                    <input style=" position:absolute; top:21px;left:280px;" class="single_btn" name="single_btn2" type="radio" value="往返" /><span style=" position:absolute; top:19px; left:300px;">多程（含缺口）</span>
+                    
+                    <!--国际界面第一个文本框-->
+                    <div class="blo_in2_con" style="display:none;">
+					<div style=" position:relative; top:55px; left:28px;" class="text">
+                    	<div class="text_l"><a href="javascript:;">出发</a></div>
+                    	<input style="border-left:none;" name="" type="text" value="杭州" />
+                    	<a href="javascript:;"><img style=" position:absolute; top:12px; right:10px;" src="images/calendar.jpg" width="16" height="13" /></a>
+                    </div>
+                    
+                    <!--国际界面第二个文本框-->
+		  <div style=" position:relative; top:18px;left:340px;" class="text">
+                    	<div class="text_l"><a href="javascript:;">日期</a></div>
+                    	<input id="rili3" class="ticket_time" style="border-left:none;" name="" type="text" value="" />
+                    	<a href="javascript:;"><img style=" position:absolute; top:12px; right:10px;" src="images/calendar1.jpg" width="16" height="13" /></a>
+                    </div>
+                    
+                    <!--国际界面第三个文本框-->
+                    <div style=" position:relative; top:40px; left:28px;" class="text">
+                    	<div class="text_l"><a href="javascript:;">到达</a></div>
+                    	<input style="border-left:none;" name="" type="text" placeholder="输入国家/城市/机场" />
+                    	<a href="javascript:;"><img style=" position:absolute; top:12px; right:10px;" src="images/calendar.jpg" width="16" height="13" /></a>
+                    </div>
+                    
+                     <!--国际界面第四个文本框-->
+		  <div style="position:relative; top:3px;left:340px;" class="text" id="text4">
+                    	<div class="text_l" id="text_ltwo" style="border:1px solid #ccc; border-right:none; background:#fff;"><a style="color:#999" href="javascript:;">日期</a></div>
+                    	<input class="ticket_time2" id="double_time" style="border-left:none;; border:1px solid #ccc;" name="" type="text" value="" onclick="text4change()" />
+                    	<a href="javascript:;"><img class="cai" style=" position:absolute; top:12px; right:10px; display:block;" src="images/calendar1.jpg" width="16" height="13"/></a>
+                        <a href="javascript:;"><img class="hui" style=" position:absolute; top:12px; right:10px; display:none;" src="images/calendar2.jpg" width="16" height="13"/></a>
+                    </div>
+                    <!--成人儿童-->
+                    <div class="passenger" style="position:absolute; bottom:10px; left:28px;">
+                    <span class="adult">成人</span>
+                    <select class="sec_pas" name="">
+                    	<option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                    </select>
+                    <span style="margin-left:20px;" class="adult">儿童</span>
+                    <select class="sec_pas" name="">
+                    	<option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                    </select>
+                    </div>
+                    
+         <a href="javascript:;"><div onmouseover="searchchange()" onmouseout="searchreturn()" class="search" style="position:absolute; bottom:10px; left:447px;">
+        立即搜索
+        </div></a>
+                    
+                    <!--换的图片-->
+                <a href="javascript:;"><img onmouseover="picchange()" class="change1" style="position:absolute; top:78px; left:268px;" src="images/change.jpg" width="22" height="55" /></a> 
+                <a href="javascript:;"><img onmouseout="picreturn()" class="change2" style=" display:none;position:absolute; top:78px; left:268px;" src="images/change1.jpg" width="22" height="55" /></a>
+ </div>
+ 
+<!--智能搜索界面-->
+ 	<div class="blo_in_intel_con" style="display:none;">
+    	<div class="intel_start">
+    		<input class="intel_start_text" name="" type="text" value="杭州" placeholder="输入城市" />
+        	<div class="intel_start_in">
+              <a href="javacript:;">出发</a> 
+            </div>
+        </div>
+        
+        <div class="intel_where">
+        	<div class="intel_where_in">
+              <a href="javacript:;">我想去</a> 
+            </div>
+            <input class="intel_where_text" name="" type="text" placeholder="可输入城市或国家" />
+        </div>
+        <a href="javascript:;"><div onmouseover="searchchange()" onmouseout="searchreturn()" class="search" style="position:absolute; bottom:75px; left:450px;">
+        立即搜索
+        </div></a>
+        <span>大家都在搜：</span>
+        <div class="intel_lable">
+        <a href="javacript:;">免签/落地签</a>|<a href="javacript:;">海滩</a>|<a href="javacript:;">第1次出国</a>|<a href="javacript:;">暑假</a>|<a href="javacript:;">蜜月</a>|<a href="javacript:;">亲子</a>|<a href="javacript:;">文化遗产</a>|<a href="javacript:;">美食</a>|<a href="javacript:;">潜水</a>|<a href="javacript:;">购物</a><br /><a href="javacript:;">电影/音乐</a>|<a href="javacript:;">山岭/滑雪</a>|<a href="javacript:;">中世纪城堡</a>|<a href="javacript:;">穷游</a>|<a href="javacript:;">世界杯</a>|<a href="javacript:;">古迹</a>|<a href="javacript:;">都市</a>|<a href="javacript:;">毕业季</a>|<a href="javacript:;">出国</a>|<a href="javacript:;">特价</a>
+        </div>
+    </div>
+ 
+ 
+ </div>
+<a href="http://www.qunar.com/xiaobao/flight.html"><img style="margin:15px 0 0 35px;" src="images/block1_pic.jpg" width="516" height="29" /></a> </div>
+
+<div class="block2" style="display:none;">
+	<h2 style="font-size:36px; margin-top:40px; margin-left:20px; display:none;">是不是以为页面空白是因为代码的bug？</h2>
+</div>
+<div class="block3" style="display:none">
+	<h2 style="font-size:72px; text-align:center; line-height:200px; display:none;">
+    	其实……
+    </h2>
+</div>
+<div class="block4" style="display:none">
+	<h2 style="font-size:50px; text-align:center; line-height:200px; display:none;">
+    	只是我郑大帅不想做了
+    </h2>
+</div>
+<div class="block5" style="display:none"></div>
+<div class="block6" style="display:none"></div>
+<div class="block7" style="display:none"></div>
+<div class="block8" style="display:none"></div>
+
+      </div>
+      <div id="sec_ad"><a href="https://zt.dujia.qunar.com/bp/zt.php?id=4024&tf=dsyysj&in_track=dsyysj"><img src="images/20171019_pc_464x320_7667.jpg" width="464" height="320" /></a></div>
+     </div>
+     <div class="ad1">
+     <img src="images/adver.jpg" width="1200" height="90" /> 
+     </div>
+     <!--ZHY-->
+     <!--第一部分结束-->
+     
+<div id="preference" style=" height:4050px">
+    <!--左半部分头部-->
+    <div class="preference-l">
+        <div class="preference-l-top">
+            <ul>
+                <li class="present" ><a href="#" onmouseover="mover(1)">今日特惠</a></li>
+                <li><a href="#" onmouseover="mover(2)">特惠门票</a></li>
+                <li><a href="#" onmouseover="mover(3)">特惠一日游</a></li>
+            </ul>
+            <span><a href="#">更多&nbsp;></a></span>
+        </div>
+		<!--左半部分内容-->
+        <div class="preference-l-main" id="main-one">
+            <a href="#"><div class="preference-l-main-left">
+            	    <div class="preference-l-main-left-img">
+            	        <img src="images/2226d682afe9e02.jpg" alt="" />
+            	    </div>
+            	    <div class="preference-l-main-left-t">
+            	        <p>昆明-丽江<br/>6天5晚跟团游</p>
+            	    </div>
+            	    <div class="preference-l-main-left-c">
+            	        5星酒店+不用购物+一价包全
+            	    </div>
+            	    <div class="preference-l-main-left-b">1580</div>
+            	</div></a>
+            <a href="#"><div class="preference-l-main-center">
+            	    <img src="images/d00397ff541c939a.jpg" alt="" />
+            	    <p><span>南京-普吉岛</span><span>六天五晚</span><span>跟…</span></p>
+            	    <span class="cou">南京直飞+奢华住宿+增浮潜</span>
+            	    <h4>￥1250</h4>
+            	</div></a>
+            <a href="#"><div class="preference-l-main-right">
+            	    <img src="images/f39cc2101e0623.png" alt="" />
+            	    <p><span>上海-德法意瑞</span><span>11天9晚</span><span>…</span></p>
+            	    <span class="cou">西欧四经典行程含签证+全程3-4星酒店..</span>
+            	    <h4>￥5399</h4>
+            	</div></a>
+            <!--下面部分同上第二部分-->
+            <a href="#"><div class="preference-l-main-left">
+            	    <div class="preference-l-main-left-img">
+            	        <img src="images/fed8729b7bc16e02.jpg" alt="" />
+            	    </div>
+            	    <div class="preference-l-main-left-t">
+            	        <p>上海-丽江<br/>6天5晚跟团游</p>
+            	    </div>
+            	    <div class="preference-l-main-left-c">
+            	        大品牌青旅一站式服务；深度游玩-超凡体验
+            	    </div>
+            	    <div class="preference-l-main-left-b">2210</div>
+            	</div></a>
+            <a href="#"><div class="preference-l-main-center">
+            	    <img src="images/38bbfcc9d0aed502.jpg" alt="" />
+            	    <p><span>上海-大阪</span><span>5天4晚</span><span>自由行</span></p>
+            	    <span class="cou">上海直飞大阪+行程DIY</span>
+            	    <h4>￥3160</h4>
+            	</div></a>
+            <a href="#"><div class="preference-l-main-right">
+            	    <img src="images/83f41a6e600fbe02.jpg" alt="" />
+            	    <p><span>杭州-大阪</span><span>5天4晚</span><span>自由行</span></p>
+            	    <span class="cou">五星全日空黄金时段正班机</span>
+            	    <h4>￥2199</h4>
+            	</div></a>
+            <!--结束-->
+        </div>
+
+        <div class="preference-l-main" id="main-two">
+            <a href="#"><div class="preference-l-main-left">
+            	    <div class="preference-l-main-left-img">
+            	        <img src="images/2bfc3dd55510ef7ea3.jpg" alt="" />
+            	    </div>
+            	    <div class="preference-l-main-left-t">
+            	        <p>横店影视城<br/>6天5晚跟团游</p>
+            	    </div>
+            	    <div class="preference-l-main-left-c"  >
+            	        被誉为“东方好莱坞”
+            	    </div>
+            	    <div class="preference-l-main-left-b">￥60</div>
+            	</div></a>
+            <a href="#"><div class="preference-l-main-center">
+            	    <img src="images/5dd523afbdbb037c90.jpg" alt="" />
+            	    <p><span>乌镇</span></p>
+            	    <span class="cou">鱼米之乡</span>
+            	    <h4>￥19</h4>
+            	</div></a>
+            <a href="#"><div class="preference-l-main-right">
+            	    <img src="images/f39cc2101e0623.png" alt="" />
+            	    <p><span>西塘古镇</span></p>
+            	    <span class="cou">水墨西塘让你感受古镇千年的诗情画意</span>
+            	    <h4>￥50</h4>
+            	</div></a>
+            <!--下面部分同上第二部分-->
+            <a href="#"><div class="preference-l-main-left">
+            	    <div class="preference-l-main-left-img">
+            	        <img src="images/8fff2332dff679ec90.jpg" alt="" />
+            	    </div>
+            	    <div class="preference-l-main-left-t">
+            	        <p>普陀山<br/>6天5晚跟团游</p>
+            	    </div>
+            	    <div class="preference-l-main-left-c">
+            	        海天佛国 观音道场——普陀山
+            	    </div>
+            	    <div class="preference-l-main-left-b">￥18</div>
+            	</div></a>
+            <a href="#"><div class="preference-l-main-center">
+            	    <img src="images/c788f0f3767d2ea0372.jpg" alt="" />
+            	    <p><span>宋城千古情</span></p>
+            	    <span class="cou">杭州宋城的灵魂，世界三大名秀</span>
+            	    <h4>￥120</h4>
+            	</div></a>
+            <a href="#"><div class="preference-l-main-right">
+            	    <img src="images/83f41a6e600fbe02.jpg" alt="" />
+            	    <p><span>西溪湿地（周家村入口）</span></p>
+            	    <span class="cou">游《非诚勿扰》拍摄地，感受湿地水乡...</span>
+            	    <h4>￥120</h4>
+            	</div></a>
+            <!--结束-->
+        </div>
+
+        <div class="preference-l-main" id="main-three">
+            <a href="#"><div class="preference-l-main-left">
+            	    <div class="preference-l-main-left-img">
+            	        <img src="images/1ca485ae5c22c3.png" alt="" />
+            	    </div>
+            	    <div class="preference-l-main-left-t">
+            	        <p>杭州出发<br/>一日游</p>
+            	    </div>
+            	    <div class="preference-l-main-left-c">
+            	        宋城+千古情演出观众席+西溪湿地一日游（含车+票+导）
+            	    </div>
+            	    <div class="preference-l-main-left-b">￥300</div>
+            	</div></a>
+            <a href="#"><div class="preference-l-main-center">
+            	    <img src="images/bc9295217c2146f7.jpg" alt="" />
+            	    <p><span>宁波出发一日游</span></p>
+            	    <span class="cou">【观音道场】普陀山跟团纯玩一日游宁...</span>
+            	    <h4>￥320</h4>
+            	</div></a>
+            <a href="#"><div class="preference-l-main-right">
+            	    <img src="images/9c5838cd3e21bb02.jpg" alt="" />
+            	    <p><span>杭州出发一日游</span></p>
+            	    <span class="cou">【杭州出发】西塘风景区+夜游乌镇西...</span>
+            	    <h4>￥306</h4>
+            	</div></a>
+            <!--下面部分同上第二部分-->
+            <a href="#"><div class="preference-l-main-left">
+            	    <div class="preference-l-main-left-img">
+            	        <img src="images/576c477bc4731cf5c8d65eac.jpg" alt="" />
+            	    </div>
+            	    <div class="preference-l-main-left-t">
+            	        <p>杭州出发<br/>一日游</p>
+            	    </div>
+            	    <div class="preference-l-main-left-c">
+            	        【杭州出发】千岛湖中心湖区1日游+登梅峰观群岛游玩 上门接
+            	    </div>
+            	    <div class="preference-l-main-left-b">￥286</div>
+            	</div></a>
+            <a href="#"><div class="preference-l-main-center">
+            	    <img src="images/0c4e8c49b276d1f7.jpg" alt="" />
+            	    <p><span>杭州出发一日游</span></p>
+            	    <span class="cou">（无购物）雷峰塔+西湖...</span>
+            	    <h4>￥170</h4>
+            	</div></a>
+            <a href="#"><div class="preference-l-main-right">
+            	    <img src="images/bc48236174e3af02.jpg" alt="" />
+            	    <p><span>杭州出发一日游</span></p>
+            	    <span class="cou">【旅游专线】杭州至乌镇，直达东栅</span>
+            	    <h4>￥29</h4>
+            	</div></a>
+            <!--结束-->
+        </div>
+        <!--轮播图部分-->
+        <div id="advert">
+        	<div id="container">
+        <div id="list" style="left: -945px;">
+            <img src="images/Carousel-figure1.jpg" alt="1" />
+            <img src="images/Carousel-figure1.jpg" alt="1" />
+            <img src="images/Carousel-figure2.jpg" alt="2" />
+            <img src="images/Carousel-figure3.jpg" alt="3" />
+            <img src="images/Carousel-figure4.jpg" alt="4" />
+            <img src="images/Carousel-figure5.jpg" alt="5" />
+            <img src="images/Carousel-figure5.jpg" alt="5" />
+        </div>
+        <div id="buttons">
+            <span index="1" class="on"></span>
+            <span index="2"></span>
+            <span index="3"></span>
+            <span index="4"></span>
+            <span index="5"></span>
+        </div>
+        <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+        <a href="javascript:;" id="next" class="arrow">&gt;</a>
+    </div>
+        </div>
+	     <!--hzt部分结束（轮播图）-->
+           <div class="holiday_out">
+	<div class="holiday">
+		<div class="holiday_top">
+			<h1 style="font-weight: normal;">当季热门度假</h1>
+		</div>
+		<div class="clr"></div>
+		<div class="ticket_left">
+			<div class="ticket_left1" style="margin-top: 0px; height: 130px;">
+				<h1>周边游</h1>
+				<ul>
+					<li><a href="javascript:;">千岛湖</a></li>
+					<li><a href="javascript:;">乌镇</a></li>
+					<li><a href="javascript:;">上海</a></li>
+					<li><a href="javascript:;">临安湍口众安氡温泉</a></li>
+					<li><a href="javascript:;">杭州云曼温泉</a></li>
+					<li><a href="javascript:;">黄山</a></li>
+				</ul>
+			</div>
+			<div class="ticket_left1" style="height: 130px;">
+				<h1>国内游</h1>
+				<ul>
+					<li><a href="javascript:;">杭州</a></li>
+					<li><a href="javascript:;">北京</a></li>
+					<li><a href="javascript:;">哈尔滨</a></li>
+					<li><a href="javascript:;">三亚</a></li>
+					<li><a href="javascript:;">丽江</a></li>
+					<li><a href="javascript:;">雪乡</a></li>
+					<li><a href="javascript:;">桂林</a></li>
+					<li><a href="javascript:;">西双版纳</a></li>
+					<li><a href="javascript:;">长白山</a></li>
+				</ul>
+			</div>
+			<div class="ticket_left1" style="height: 130px;">
+				<h1>出境游</h1>
+				<ul>
+					<li><a href="javascript:;">泰国</a></li>
+					<li><a href="javascript:;">日本</a></li>
+					<li><a href="javascript:;">芽庄</a></li>
+					<li><a href="javascript:;">普吉岛</a></li>
+					<li><a href="javascript:;">俄罗斯</a></li>
+					<li><a href="javascript:;">巴厘岛</a></li>
+					<li><a href="javascript:;">法国</a></li>
+					<li><a href="javascript:;">塞班岛</a></li>
+					<li><a href="javascript:;">沙巴</a></li>
+				</ul>
+			</div>
+			<div class="ticket_left1" style="height: 130px;">
+				<h1>签证</h1>
+				<ul>
+					<li><a href="javascript:;">日本</a></li>
+					<li><a href="javascript:;">泰国</a></li>
+					<li><a href="javascript:;">韩国</a></li>
+					<li><a href="javascript:;">美国</a></li>
+					<li><a href="javascript:;">澳大利亚</a></li>
+					<li><a href="javascript:;">南非</a></li>
+					<li><a href="javascript:;">台湾</a></li>
+					<li><a href="javascript:;">新加坡</a></li>
+					<li><a href="javascript:;">马来西亚</a></li>
+				</ul>
+			</div>			
+		</div>
+		<div class="ticket_right">
+			<a href="javascript:;"><div class="ticket_right2" style="margin-top: 12px; width: 237px;">
+				<div class="ticket_right2_img" style="background-image: url(images/e9603bf3a8f7fbfd93835fbb.jpg);">
+					<div class="ticket_right2_img_text">
+						<h4>杭州—丽江</h1>
+						<h5>6天跟团游</h2>
+					</div>
+				</div>
+				<h1>含往返飞机票+5晚住宿</h1>
+				<h2><br /></h2>
+				<h3>¥2380</h3>
+			</div>
+			</a>
+			<a href="javascript:;"><div class="ticket_right2" style="margin-top: 12px; width: 237px;">
+				<div class="ticket_right2_img" style="background-image: url(images/8db08d342fdbb13c93835fbb.jpg);">
+					<div class="ticket_right2_img_text">
+						<h4>杭州—三亚</h1>
+						<h5>6天跟团游</h2>
+					</div>
+				</div>
+				<h1>含往返飞机票（含税）+5晚住宿</h1>
+				<h2><br /></h2>
+				<h3>¥2078</h3>
+			</div>
+			</a>
+			<a href="javascript:;"><div class="ticket_right2" style="margin-top: 12px; width: 237px;">
+				<div class="ticket_right2_img" style="background-image: url(images/76fb7ba033738fbbcdb.jpg_256x160_ffff01b7.jpg);">
+					<div class="ticket_right2_img_text">
+						<h4>杭州—芽庄</h1>
+						<h5>5天自由行</h2>
+					</div>
+				</div>
+				<h1>含往返飞机票+4晚住宿	</h1>
+				<h2><br /></h2>
+				<h3>¥3199</h3>
+			</div>
+			</a>
+			<a href="javascript:;"><div class="ticket_right2" style="margin-top: 12px; width: 237px;">
+				<div class="ticket_right2_img" style="background-image: url(images/051067f8abe078f893835fbb.jpg_256x160_9f1ce71f.jpg);">
+					<div class="ticket_right2_img_text">
+						<h4>杭州</h1>
+						<h5>2天跟团游</h2>
+					</div>
+				</div>
+				<h1>2晚住宿</h1>
+				<h2><br /></h2>
+				<h3>¥399</h3>
+			</div>
+			</a>
+			<a href="javascript:;"><div class="ticket_right2" style="margin-top: 12px; width: 237px;">
+				<div class="ticket_right2_img" style="background-image: url(images/bc44faa497db0dcf93835fbb.jpg_256x160_0ba13461.jpg);">
+					<div class="ticket_right2_img_text">
+						<h4>杭州—泰国</h1>
+						<h5>6天跟团游</h2>
+					</div>
+				</div>
+				<h1>含往返飞机票+4晚住宿</h1>
+				<h2><br /></h2>
+				<h3>¥3580</h3>
+			</div>
+			</a>
+			<a href="javascript:;"><div class="ticket_right2" style="margin-top: 12px; width: 237px;">
+				<div class="ticket_right2_img" style="background-image: url(images/c1bbdd308ed145ab93835fbb.jpg_256x160_4fd8c729.jpg);">
+					<div class="ticket_right2_img_text" style="width: 130px;" >
+						<h4>杭州—新加坡</h1>
+						<h5>6天跟团游</h2>
+					</div>
+				</div>
+				<h1>含往返飞机票+4晚住宿</h1>
+				<h2><br /></h2>
+				<h3>¥3780</h3>
+			</div>
+			</a>
+		</div>	
+
+	</div>
+	</div>
+	
+	<div class="ticket_out">
+	<div class="ticket">
+		<div class="ticket_top">
+			<h1>当地景点门票</h1>
+			<h2><a href="javascript:;">更多 ></a></h2>
+		</div>
+		<div class="clr"></div>
+		<div class="ticket_left">
+			<div class="ticket_left1" style="margin-top: 0px;">
+				<h1>热门景点</h1>
+				<ul>
+					<li><a href="javascript:;">南浔古镇</a></li>
+					<li><a href="javascript:;">宋城</a></li>
+					<li><a href="javascript:;">乌镇</a></li>
+					<li><a href="javascript:;">横店</a></li>
+				</ul>
+			</div>
+			<div class="ticket_left1"style="height: 189px;">
+				<h1>国内目的地</h1>
+				<ul>
+					<li><a href="javascript:;">武汉</a></li>
+					<li><a href="javascript:;">北京</a></li>
+					<li><a href="javascript:;">上海</a></li>
+					<li><a href="javascript:;">三亚</a></li>
+					<li><a href="javascript:;">成都</a></li>
+					<li><a href="javascript:;">厦门</a></li>
+					<li><a href="javascript:;">广州</a></li>
+					<li><a href="javascript:;">深圳</a></li>
+					<li><a href="javascript:;">杭州</a></li>
+					<li><a href="javascript:;">大连</a></li>
+					<li><a href="javascript:;">桂林</a></li>
+					<li><a href="javascript:;">重庆</a></li>
+					<li><a href="javascript:;">青岛</a></li>
+					<li><a href="javascript:;">苏州</a></li>
+					<li><a href="javascript:;">南京</a></li>
+					<li><a href="javascript:;">丽江</a></li>
+					<li><a href="javascript:;">天津</a></li>
+					<li><a href="javascript:;">昆明</a></li>
+					<li><a href="javascript:;">张家界</a></li>
+				</ul>
+			</div>
+			<div class="ticket_left1" style="height: 169px;">
+				<h1>品质一日游</h1>
+				<ul>
+					<li><a href="javascript:;">西塘古镇</a></li>
+					<li><a href="javascript:;">西湖游船</a></li>
+					<li><a href="javascript:;">西天景区</a></li>
+					<li><a href="javascript:;">海瑞祠</a></li>
+					<li><a href="javascript:;">二龟听法石</a></li>
+					<li><a href="javascript:;">莫干山</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="ticket_right">
+			<a href="javascript:;"><div class="ticket_right1"></div></a>
+			<a href="javascript:;"><div class="ticket_right2">
+				<div class="ticket_right2_img"></div>
+				<h1 style="font-weight:normal;">横店影视城</h1>
+				<h2 style="font-weight:normal;">被誉为东方好莱坞</h2>
+				<h3>¥60</h3>
+			</div>
+			</a>
+			<a href="javascript:;"><div class="ticket_right2" style="margin-left: 0px; margin-top: 12px;">
+				<div class="ticket_right2_img" style="background-image: url(images/8fff2332dff679ec90.jpg);"></div>
+				<h1 style="font-weight:normal;">普陀山</h1>
+				<h2 style="font-weight:normal;">海天佛国 观音道场——普陀山</h2>
+				<h3>¥18</h3>
+			</div>
+			</a>
+			<a href="javascript:;">
+			<div class="ticket_right2" style="margin-top: 12px;">
+				<div class="ticket_right2_img" style="background-image: url(images/5dd523afbdbb037c90.jpg);"></div>
+				<h1 style="font-weight:normal;">乌镇</h1>
+				<h2 style="font-weight:normal;">鱼米之乡，丝绸之府</h2>
+				<h3>¥19</h3>
+			</div>
+			</a>
+			<a href="javascript:;"><div class="ticket_right2" style="margin-top: 12px;">
+				<div class="ticket_right2_img" style="background-image: url(images/783ed50ac6d5f0ffb4.jpg);"></div>
+				<h1 style="font-weight:normal;">西塘古镇</h1>
+				<h2 style="font-weight:normal;">水墨西塘让你感受古镇千年的诗情画意</h2>
+				<h3>¥50</h3>
+			</div>
+			</a>
+		</div>
+	</div>		
+	</div>
+	
+	<div class="hotel_out">
+		<div class="hotel">
+		<div class="hotel_top">
+			<h1 style="font-weight: normal;">超值酒店团购推荐</h1>
+		</div>
+		<div class="clr"></div>		
+		<div class="hotel_m">
+			<ul>
+				<li class="hot_1" onmouseover="hot1()"><a href="javascript:;" style="color: #FFFFFF; background-color: #00AFC7;">热销精选</a></li>
+				<li class="hot_2" onmouseover="hot2()"><a href="javascript:;">超值低价</a></li>
+				<li class="hot_3" onmouseover="hot3()"><a href="javascript:;">超值特惠</a></li>
+				<li class="hot_4" onmouseover="hot4()"><a href="javascript:;">豪华低价</a></li>
+			</ul>
+		</div>
+		<div class="clr"></div>
+		<div class="hotel_b">
+		<div class="ticket_left">
+			<div class="ticket_left1" style="margin-top: 0px; height:130px;">
+				<h1>酒店价格</h1>
+				<ul>
+					<li style="margin-right: 28px;"><a href="javascript:;"><a href="javascript:;">¥50以下</a></li>
+					<li><a href="javascript:;"><a href="javascript:;">¥50-¥100</a></li>
+					<li><a href="javascript:;"><a href="javascript:;">¥100-¥150</a></li>
+					<li><a href="javascript:;"><a href="javascript:;">¥150-¥200</a></li>
+					<li><a href="javascript:;"><a href="javascript:;">¥200-¥500</a></li>
+					<li><a href="javascript:;"><a href="javascript:;">¥500以上</a></li>
+				</ul>
+			</div>
+			<div class="ticket_left1" style="height:228px;">
+				<h1>酒店品牌</h1>
+				<ul>
+					<li style="width: 60px; height: 18px;"><a href="javascript:;">布丁</a></li>
+					<li style="width: 60px; height: 18px;"><a href="javascript:;">99连锁</a></li>
+					<li style="width: 60px; height: 18px;"><a href="javascript:;">速8</a></li>
+					<li style="width: 60px; height: 18px;"><a href="javascript:;">锦江之星</a></li>
+					<li style="width: 60px; height: 18px;"><a href="javascript:;">格林豪泰</a></li>
+					<li style="width: 75px; height: 18px;"><a href="javascript:;">国际青年旅舍</a></li>
+					<li style="width: 60px; height: 18px;"><a href="javascript:;">君亭</a></li>
+					<li style="width: 60px; height: 18px;"><a href="javascript:;">南苑e家</a></li>
+					<li style="width: 60px; height: 18px;"><a href="javascript:;">万好万家</a></li>
+					<li style="width: 60px; height: 18px;"><a href="javascript:;">宜必思</a></li>
+					<li style="width: 60px; height: 18px;"><a href="javascript:;">维也纳</a></li>
+					<li style="width: 60px; height: 18px;"><a href="javascript:;">格林联盟</a></li>
+					<li style="width: 60px; height: 18px;"><a href="javascript:;">开元大酒店</a></li>
+					<li style="width: 60px; height: 18px;"><a href="javascript:;">海航大酒店</a></li>
+				</ul>
+			</div>
+			<div class="ticket_left1" style="height: ;">
+				<h1>酒店分类</h1>
+				<ul>
+					<li style="width: 60px; height: 18px;"><a href="javascript:;">经济型</a></li>
+					<li style="width: 60px; height: 18px;"><a href="javascript:;">舒适型</a></li>
+					<li style="width: 60px; height: 18px;"><a href="javascript:;">主题酒店</a></li>
+					<li style="width: 60px; height: 18px;"><a href="javascript:;">高档豪华</a></li>
+					<li style="width: 60px; height: 18px;"><a href="javascript:;">连锁品牌</a></li>
+					<li style="width: 60px; height: 18px;"><a href="javascript:;">度假酒店</a></li>
+					<li style="width: 60px; height: 18px;"><a href="javascript:;">公寓型酒店</a></li>
+					<li style="width: 60px; height: 18px;"><a href="javascript:;">青年旅社</a></li>
+					<li style="width: 60px; height: 18px;"><a href="javascript:;">客栈</a></li>
+				</ul>
+			</div>		
+		</div>
+		<div class="hotel_r1">
+		<div class="ticket_right">
+			<a href="javascript:;"><div class="ticket_right1" style="background-image:url(images/097ca91fb020b9.jpg);"></div></a>
+			<a href="javascript:;"><div class="ticket_right2">
+				<div class="ticket_right2_img" style="background-image:url(images/JhS1_thjlr2EWfW1J480.jpg);"></div>
+				<h1>【大江东新城】杭州沙地酒店</h1>
+				<ul class="sprite">
+					<span class="span1">经济型</span>
+					<li style="margin-bottom: 8px;">
+					<s style="background-position: -29px 5px;" class="s-icon"></s>
+					<s style="background-position: -93px 6px;" class="s-icon"></s>
+					<s style="background-position: -61px 6px;" class="s-icon"></s>
+					</li>
+					<li>
+					<s style="background-position: -177px 2px;" class="s-icon"></s>
+					<a href="javascript:;">杭州市萧山区义蓬街道英冠天</a>
+					</li>
+				</ul>
+				<h3 style="margin-top: 5px;">¥218<span class="black">起</span></h3>
+			</div>
+			</a>
+			<a href="javascript:;"><div class="ticket_right2" style="margin-left: 0px; margin-top: 12px;">
+				<div class="ticket_right2_img" style="background-image: url(images/JhS1_t5DjmgtYX7zJ480.jpg);"></div>
+				<h1>【其他】杭州花自在度假别墅</h1>
+				<ul class="sprite">
+					<span class="span1">经济型</span>
+					<li style="margin-bottom: 8px;">
+					<s style="background-position: -29px 5px;" class="s-icon"></s>
+					<s style="background-position: -93px 6px;" class="s-icon"></s>
+					<s style="background-position: -61px 6px;" class="s-icon"></s>
+					</li>
+					<li>
+					<s style="background-position: -177px 2px;" class="s-icon"></s>
+					<a href="javascript:;">杭州市余杭区径山镇径山古道口</a>
+					</li>
+				</ul>
+				<h3 style="margin-top: 5px;">¥988<span class="black">起</span></h3>
+			</div>
+			</a>
+			<a href="javascript:;">
+			<div class="ticket_right2" style="margin-top: 12px;">
+				<div class="ticket_right2_img" style="background-image: url(images/66I5P26rol0ReEVu6480.jpg);"></div>
+				<h1>【其他】杭州澳美商务酒店</h1>
+				<ul class="sprite">
+					<span class="span1">经济型</span>
+					<li style="margin-bottom: 8px;">
+					<s style="background-position: -29px 5px;" class="s-icon"></s>
+					<s style="background-position: -93px 6px;" class="s-icon"></s>
+					<s style="background-position: -61px 6px;" class="s-icon"></s>
+					</li>
+					<li>
+					<s style="background-position: -177px 2px;" class="s-icon"></s>
+					<a href="javascript:;">杭州萧山区萧绍东路116号</a>
+					</li>
+				</ul>
+				<h3 style="margin-top: 5px;">¥98<span class="black">起</span></h3>
+			</div>
+			</a>
+			<a href="javascript:;"><div class="ticket_right2" style="margin-top: 12px;">
+				<div class="ticket_right2_img" style="background-image: url(images/66I5P26_lklrgGux6480.jpg);"></div>
+				<h1>【其他】杭州梦凯宾馆</h1>
+				<ul class="sprite">
+					<span class="span1">经济型</span>
+					<li style="margin-bottom: 8px;">
+					<s style="background-position: -29px 5px;" class="s-icon"></s>
+					<s style="background-position: -93px 6px;" class="s-icon"></s>
+					<s style="background-position: -61px 6px;" class="s-icon"></s>
+					</li>
+					<li>
+					<s style="background-position: -177px 2px;" class="s-icon"></s>
+					<a href="javascript:;">杭州萧山义桥镇萧山钢材城内</a>
+					</li>
+				</ul>
+				<h3 style="margin-top: 5px;">¥158<span class="black">起</span></h3>
+			</div>
+			</a>
+		</div>
+		</div>
+		<div class="hotel_r2" style="display: none;">
+		<div class="ticket_right">
+			<a href="javascript:;"><div class="ticket_right2" style="width: 237px;">
+				<div class="ticket_right2_img" style="background-image:url(images/dijia1.jpg);"></div>
+				<h1>【大明山】杭州临安大明山随缘...</h1>
+				<ul class="sprite">
+					<span class="span1">经济型</span>
+					<li style="margin-bottom: 8px;">
+					<s style="background-position: -29px 5px;" class="s-icon"></s>
+					<s style="background-position: -93px 6px;" class="s-icon"></s>
+					<s style="background-position: -61px 6px;" class="s-icon"></s>
+					</li>
+					<li>
+					<s style="background-position: -177px 2px;" class="s-icon"></s>
+					<a href="javascript:;">杭州清凉峰镇白果村大明山102号</a>
+					</li>
+				</ul>
+				<h3 style="margin-top: 5px;">¥89<span class="black">起</span></h3>
+			</div>
+			</a>
+			<a href="javascript:;"><div class="ticket_right2" style="margin-left: 12px; width: 237px;">
+				<div class="ticket_right2_img" style="background-image: url(images/dijia2.jpg);"></div>
+				<h1>【其他】杭州临安温泉乌狮桥农家</h1>
+				<ul class="sprite">
+					<span class="span1">经济型</span>
+					<li style="margin-bottom: 8px;">
+					<s style="background-position: -29px 5px;" class="s-icon"></s>
+					<s style="background-position: -93px 6px;" class="s-icon"></s>
+					<s style="background-position: -61px 6px;" class="s-icon"></s>
+					</li>
+					<li>
+					<s style="background-position: -177px 2px;" class="s-icon"></s>
+					<a href="javascript:;">杭州市临安湍口镇乌狮桥(众...</a>
+					</li>
+				</ul>
+				<h3 style="margin-top: 5px;">¥108<span class="black">起</span></h3>
+			</div>
+			</a>
+			<a href="javascript:;">
+			<div class="ticket_right2" style="width: 237px;">
+				<div class="ticket_right2_img" style="background-image: url(images/dijia3.jpg);"></div>
+				<h1>【其他】杭州哥得曼宾馆</h1>
+				<ul class="sprite">
+					<span class="span1">经济型</span>
+					<li style="margin-bottom: 8px;">
+					<s style="background-position: -29px 5px;" class="s-icon"></s>
+					<s style="background-position: -93px 6px;" class="s-icon"></s>
+					<s style="background-position: -61px 6px;" class="s-icon"></s>
+					</li>
+					<li>
+					<s style="background-position: -177px 2px;" class="s-icon"></s>
+					<a href="javascript:;">杭州市萧山区瓜沥镇东灵路269号</a>
+					</li>
+				</ul>
+				<h3 style="margin-top: 5px;">¥99<span class="black">起</span></h3>
+			</div>
+			</a>
+			<a href="javascript:;"><div class="ticket_right2" style="margin-top: 12px; width: 237px;">
+				<div class="ticket_right2_img" style="background-image: url(images/dijia4.jpg);"></div>
+				<h1>【其他】都市118连锁酒店萧山...</h1>
+				<ul class="sprite">
+					<span class="span1">经济型</span>
+					<li style="margin-bottom: 8px;">
+					<s style="background-position: -29px 5px;" class="s-icon"></s>
+					<s style="background-position: -93px 6px;" class="s-icon"></s>
+					<s style="background-position: -61px 6px;" class="s-icon"></s>
+					</li>
+					<li>
+					<s style="background-position: -177px 2px;" class="s-icon"></s>
+					<a href="javascript:;">杭州萧山区新塘镇南秀路2658号</a>
+					</li>
+				</ul>
+				<h3 style="margin-top: 5px;">¥149<span class="black">起</span></h3>
+			</div>
+			</a>
+			<a href="javascript:;"><div class="ticket_right2" style="margin-top: 12px; width: 237px;">
+				<div class="ticket_right2_img" style="background-image: url(images/dijia5.jpg);"></div>
+				<h1>【德胜路】杭州一鼎旅馆杭州一...</h1>
+				<ul class="sprite">
+					<span class="span1">经济型</span>
+					<li style="margin-bottom: 8px;">
+					<s style="background-position: -29px 5px;" class="s-icon"></s>
+					<s style="background-position: -93px 6px;" class="s-icon"></s>
+					<s style="background-position: -61px 6px;" class="s-icon"></s>
+					</li>
+					<li>
+					<s style="background-position: -177px 2px;" class="s-icon"></s>
+					<a href="javascript:;">杭州拱墅区上塘路323号</a>
+					</li>
+				</ul>
+				<h3 style="margin-top: 5px;">¥97<span class="black">起</span></h3>
+			</div>
+			</a>
+			<a href="javascript:;"><div class="ticket_right2" style="margin-top: 12px; width: 237px;">
+				<div class="ticket_right2_img" style="background-image: url(images/dijia6.jpg);"></div>
+				<h1>【其他】临安友家宾馆</h1>
+				<ul class="sprite">
+					<span class="span1">经济型</span>
+					<li style="margin-bottom: 8px;">
+					<s style="background-position: -29px 5px;" class="s-icon"></s>
+					<s style="background-position: -93px 6px;" class="s-icon"></s>
+					<s style="background-position: -61px 6px;" class="s-icon"></s>
+					</li>
+					<li>
+					<s style="background-position: -177px 2px;" class="s-icon"></s>
+					<a href="javascript:;">杭州市临安市锦城镇大学路98...</a>
+					</li>
+				</ul>
+				<h3 style="margin-top: 5px;">¥98<span class="black">起</span></h3>
+			</div>
+			</a>
+		</div>
+		</div>
+		<div class="hotel_r3" style="display: none;">
+		<div class="ticket_right">
+			<a href="javascript:;"><div class="ticket_right2" style="width: 237px;">
+				<div class="ticket_right2_img" style="background-image:url(images/tehui1.jpg);"></div>
+				<h1>【其他】开元·颐居杭州萧山海...</h1>
+				<ul class="sprite">
+					<span class="span1">高档豪华 </span>
+					<li style="margin-bottom: 8px;">
+					<s style="background-position: -29px 5px;" class="s-icon"></s>
+					<s style="background-position: -93px 6px;" class="s-icon"></s>
+					<s style="background-position: -61px 6px;" class="s-icon"></s>
+					</li>
+					<li>
+					<s style="background-position: -177px 2px;" class="s-icon"></s>
+					<a href="javascript:;">杭州萧山区河上镇下门村138号</a>
+					</li>
+				</ul>
+				<h3 style="margin-top: 5px;">¥849<span class="black">起</span></h3>
+			</div>
+			</a>
+			<a href="javascript:;"><div class="ticket_right2" style="margin-left: 12px; width: 237px;">
+				<div class="ticket_right2_img" style="background-image: url(images/tehui2.jpg);"></div>
+				<h1>【其他】杭州四季华庭节省家庭...</h1>
+				<ul class="sprite">
+					<span class="span1">经济型</span>
+					<li style="margin-bottom: 8px;">
+					<s style="background-position: -29px 5px;" class="s-icon"></s>
+					<s style="background-position: -93px 6px;" class="s-icon"></s>
+					<s style="background-position: -61px 6px;" class="s-icon"></s>
+					</li>
+					<li>
+					<s style="background-position: -177px 2px;" class="s-icon"></s>
+					<a href="javascript:;">杭州萧山区育才路绿都四季华...</a>
+					</li>
+				</ul>
+				<h3 style="margin-top: 5px;">¥48<span class="black">起</span></h3>
+			</div>
+			</a>
+			<a href="javascript:;">
+			<div class="ticket_right2" style="width: 237px;">
+				<div class="ticket_right2_img" style="background-image: url(images/tehui3.jpg);"></div>
+				<h1>【其他】桐庐印象桃源民宿</h1>
+				<ul class="sprite">
+					<span class="span1">经济型</span>
+					<li style="margin-bottom: 8px;">
+					<s style="background-position: -29px 5px;" class="s-icon"></s>
+					<s style="background-position: -93px 6px;" class="s-icon"></s>
+					<s style="background-position: -61px 6px;" class="s-icon"></s>
+					</li>
+					<li>
+					<s style="background-position: -177px 2px;" class="s-icon"></s>
+					<a href="javascript:;">杭州桐庐县瑶琳镇桃源新村2排</a>
+					</li>
+				</ul>
+				<h3 style="margin-top: 5px;">¥117<span class="black">起</span></h3>
+			</div>
+			</a>
+			<a href="javascript:;"><div class="ticket_right2" style="margin-top: 12px; width: 237px;">
+				<div class="ticket_right2_img" style="background-image: url(images/tehui4.jpg);"></div>
+				<h1>【其他】杭州塘栖聚乐楼旅馆</h1>
+				<ul class="sprite">
+					<span class="span1">经济型</span>
+					<li style="margin-bottom: 8px;">
+					<s style="background-position: -29px 5px;" class="s-icon"></s>
+					<s style="background-position: -93px 6px;" class="s-icon"></s>
+					<s style="background-position: -61px 6px;" class="s-icon"></s>
+					</li>
+					<li>
+					<s style="background-position: -177px 2px;" class="s-icon"></s>
+					<a href="javascript:;">杭州余杭区塘栖镇塘栖路334号</a>
+					</li>
+				</ul>
+				<h3 style="margin-top: 5px;">¥25<span class="black">起</span></h3>
+			</div>
+			</a>
+			<a href="javascript:;"><div class="ticket_right2" style="margin-top: 12px; width: 237px;">
+				<div class="ticket_right2_img" style="background-image: url(images/tehui5.jpg);"></div>
+				<h1>【其他】杭州凤山客房</h1>
+				<ul class="sprite">
+					<span class="span1">经济型</span>
+					<li style="margin-bottom: 8px;">
+					<s style="background-position: -29px 5px;" class="s-icon"></s>
+					<s style="background-position: -93px 6px;" class="s-icon"></s>
+					<s style="background-position: -61px 6px;" class="s-icon"></s>
+					</li>
+					<li>
+					<s style="background-position: -177px 2px;" class="s-icon"></s>
+					<a href="javascript:;">杭州市上城区江城路104号二楼</a>
+					</li>
+				</ul>
+				<h3 style="margin-top: 5px;">¥108<span class="black">起</span></h3>
+			</div>
+			</a>
+			<a href="javascript:;"><div class="ticket_right2" style="margin-top: 12px; width: 237px;">
+				<div class="ticket_right2_img" style="background-image: url(images/tehui6.jpg);"></div>
+				<h1>【其他】杭州启源旅馆</h1>
+				<ul class="sprite">
+					<span class="span1">经济型</span>
+					<li style="margin-bottom: 8px;">
+					<s style="background-position: -29px 5px;" class="s-icon"></s>
+					<s style="background-position: -93px 6px;" class="s-icon"></s>
+					<s style="background-position: -61px 6px;" class="s-icon"></s>
+					</li>
+					<li>
+					<s style="background-position: -177px 2px;" class="s-icon"></s>
+					<a href="javascript:;">杭州下城区东新路888号</a>
+					</li>
+				</ul>
+				<h3 style="margin-top: 5px;">¥109<span class="black">起</span></h3>
+			</div>
+			</a>
+		</div>
+		</div>
+		<div class="hotel_r4" style="display: none;">
+		<div class="ticket_right">
+			<a href="javascript:;"><div class="ticket_right2" style="width: 237px;">
+				<div class="ticket_right2_img" style="background-image:url(images/haohua1.jpg);"></div>
+				<h1>【钱江新城】杭州钱江新城万豪...</h1>
+				<ul class="sprite">
+					<span class="span1">高档豪华</span>
+					<li style="margin-bottom: 8px;">
+					<s style="background-position: -29px 5px;" class="s-icon"></s>
+					<s style="background-position: -93px 6px;" class="s-icon"></s>
+					<s style="background-position: -61px 6px;" class="s-icon"></s>
+					</li>
+					<li>
+					<s style="background-position: -177px 2px;" class="s-icon"></s>
+					<a href="javascript:;">杭州江干区剧院路399号</a>
+					</li>
+				</ul>
+				<h3 style="margin-top: 5px;">¥1099<span class="black">起</span></h3>
+			</div>
+			</a>
+			<a href="javascript:;"><div class="ticket_right2" style="margin-left: 12px; width: 237px;">
+				<div class="ticket_right2_img" style="background-image: url(images/haohua2.jpg);"></div>
+				<h1>【体育场路】杭州JW万豪酒店</h1>
+				<ul class="sprite">
+					<span class="span1">高档豪华</span>
+					<li style="margin-bottom: 8px;">
+					<s style="background-position: -29px 5px;" class="s-icon"></s>
+					<s style="background-position: -93px 6px;" class="s-icon"></s>
+					<s style="background-position: -61px 6px;" class="s-icon"></s>
+					</li>
+					<li>
+					<s style="background-position: -177px 2px;" class="s-icon"></s>
+					<a href="javascript:;">杭州市拱墅区湖墅南路28号</a>
+					</li>
+				</ul>
+				<h3 style="margin-top: 5px;">¥1325<span class="black">起</span></h3>
+			</div>
+			</a>
+			<a href="javascript:;">
+			<div class="ticket_right2" style="width: 237px;">
+				<div class="ticket_right2_img" style="background-image: url(images/haohua3.jpg);"></div>
+				<h1>【北干】杭州开元名都大酒店</h1>
+				<ul class="sprite">
+					<span class="span1">高档豪华</span>
+					<li style="margin-bottom: 8px;">
+					<s style="background-position: -29px 5px;" class="s-icon"></s>
+					<s style="background-position: -93px 6px;" class="s-icon"></s>
+					<s style="background-position: -61px 6px;" class="s-icon"></s>
+					</li>
+					<li>
+					<s style="background-position: -177px 2px;" class="s-icon"></s>
+					<a href="javascript:;">杭州市萧山区市心中路818号</a>
+					</li>
+				</ul>
+				<h3 style="margin-top: 5px;">¥788<span class="black">起</span></h3>
+			</div>
+			</a>
+			<a href="javascript:;"><div class="ticket_right2" style="margin-top: 12px; width: 237px;">
+				<div class="ticket_right2_img" style="background-image: url(images/haohua4.jpg);"></div>
+				<h1>【临平】杭州远东宾馆</h1>
+				<ul class="sprite">
+					<span class="span1">高档豪华</span>
+					<li style="margin-bottom: 8px;">
+					<s style="background-position: -29px 5px;" class="s-icon"></s>
+					<s style="background-position: -93px 6px;" class="s-icon"></s>
+					<s style="background-position: -61px 6px;" class="s-icon"></s>
+					</li>
+					<li>
+					<s style="background-position: -177px 2px;" class="s-icon"></s>
+					<a href="javascript:;">杭州余杭区临平人民大道355...</a>
+					</li>
+				</ul>
+				<h3 style="margin-top: 5px;">¥310<span class="black">起</span></h3>
+			</div>
+			</a>
+			<a href="javascript:;"><div class="ticket_right2" style="margin-top: 12px; width: 237px;">
+				<div class="ticket_right2_img" style="background-image: url(images/haohua5.jpg);"></div>
+				<h1>【其他】千岛湖洲际度假酒店</h1>
+				<ul class="sprite">
+					<span class="span1">高档豪华</span>
+					<li style="margin-bottom: 8px;">
+					<s style="background-position: -29px 5px;" class="s-icon"></s>
+					<s style="background-position: -93px 6px;" class="s-icon"></s>
+					<s style="background-position: -61px 6px;" class="s-icon"></s>
+					</li>
+					<li>
+					<s style="background-position: -177px 2px;" class="s-icon"></s>
+					<a href="javascript:;">浙江省杭州市淳安县千岛湖镇...</a>
+					</li>
+				</ul>
+				<h3 style="margin-top: 5px;">¥1198<span class="black">起</span></h3>
+			</div>
+			</a>
+			<a href="javascript:;"><div class="ticket_right2" style="margin-top: 12px; width: 237px;">
+				<div class="ticket_right2_img" style="background-image: url(images/haohua6.jpg);"></div>
+				<h1>【其他】良渚君澜度假酒店</h1>
+				<ul class="sprite">
+					<span class="span1">高档豪华</span>
+					<li style="margin-bottom: 8px;">
+					<s style="background-position: -29px 5px;" class="s-icon"></s>
+					<s style="background-position: -93px 6px;" class="s-icon"></s>
+					<s style="background-position: -61px 6px;" class="s-icon"></s>
+					</li>
+					<li>
+					<s style="background-position: -177px 2px;" class="s-icon"></s>
+					<a href="javascript:;">余杭区良渚文化村内(余杭区,...</a>
+					</li>
+				</ul>
+				<h3 style="margin-top: 5px;">¥868<span class="black">起</span></h3>
+			</div>
+			</a>
+		</div>
+		</div>
+		</div>
+		</div>
+	</div>
+    <!--czm部分结束-->
+    <!--旅游攻略-->
+<div class="plan" style="margin-top:30px;">
+  <div class="plan_in"> <span class="travel">旅游攻略</span> <span class="guide">你的旅行指南</span>
+    <div class="plan_right"> <span class="plan_right_zuo">创建行程</span> <div class="dt1"></div><span class="plan_right_you">
+      
+      发表游记</span> </div>
+  </div>
+  <div class="clr"></div>
+  <div class="plan_nav">
+    <ul>
+      <li class="plan_one" onmouseover="plan1()"><a  href="javascript:;" >最近精华游记</a></li>
+      <li  class="plan_two"onmouseover="plan2()"><a href="javascript:;">冰雪奇缘</a></li>
+      <li class="plan_three" onmouseover="plan3()"><a href="javascript:;">宝贝出游计划</a></li>
+      <li class="plan_four" onmouseover="plan4()"><a href="javascript:;">来场面前出行！</a>    </li>
+    </ul>
+    <div class="plan_nav_right"> <span><a href="javascript:;">更多&nbsp;&nbsp;></a></span> </div>
+  </div>
+
+<!--开始-->
+<div class="mod-home-travel">
+  <div class="mod-home-travel_left" style=" position:relative; overflow:hidden;"  onmouseover="start()" onmouseout="end()">
+  <a href="javascript:;"><img src="images/0a2f2f38e79ed237.jpg" width="435" height="332" /></a>
+  	<div class="zhezhao1">
+   	  <h2 style="color:#fff; font-size:14px; font-family:'微软雅黑'; font-weight:700; text-indent:10px; line-height:30px;">【河南井下】河南颜值扛把子</h2>
+        <span style=" width:40px; height:40px; float:left;" class="zhezhao1_img">
+        <img style="border-radius:50%;margin-left:15px; float:left;" src="images/zhezhao1_img.jpg" width="40" height="40" /></span>
+        <p>
+        	<span style="color:#fff;">河南井盖贼</span>
+            <span style="color:#ccc;">|</span>
+            <span>2016-09-18出发</span>
+        </p><br />
+        <p>
+        	<span>共9天</span>
+            <span style="color:#ccc;">|</span>
+            <span>12张照片</span>
+        </p> 
+    </div>
+  </div>
+  <div class="mod-home-travel_right">
+    <div class="mod-home-travel_right_one"  onmouseover="start2()" onmouseout="end2()" >
+    <a href="javascript:;"><img src="images/0cda89457dcdc937.jpg" width="240" height="158" /></a>
+	<div class="zhezhao2">
+     <h2 style="color:#fff; font-size:12px; font-family:'微软雅黑'; font-weight:700; text-indent:10px; line-height:25px;">【温州地瓜干】温州的小姨子跑了</h2>
+     <span style="width:40px; height:40px; float:left;" class="zhezhao2_img"><img style="border-radius:50%; margin-left:15px; float:left;" src="images/3c74abce42ba79ea.jpg_r_48x48_1d3d9d3b.jpg" width="40" height="40" /></span>
+     <p>
+     		<span style="color:#fff;">温州皮革厂</span>
+            <span style="color:#ccc;">|</span>
+            <span>2016-09-18出发</span>
+      </p><br />
+      <p>
+      <span>共9天</span>
+            <span style="color:#ccc;">|</span>
+            <span>12张照片</span>
+      </p>
+    </div>
+    </div>
+    <div class="mod-home-travel_right_two"><a href="javascript:;"><img src="images/9a018f2353170537.jpg" width="240" height="158" /></a></div>
+    <div class="mod-home-travel_right_three"><a href="javascript:;"><img src="images/0981fdf800a1d437.jpg" width="240" height="158" /></a></div>
+<div class="mod-home-travel_right_four"><a href="javascript:;"><img src="images/03c79012eceae637.jpg" width="240" height="158" /></a></div>
+</div>
+
+  <div class="clr"></div>
+  <div class="mod-home-travel_bottom">
+    <div class="mod-fList-item">
+      <p class="mod-fList-item-title">国内热门目的地</p>
+      <ul>
+        <li> <span class="mod-fList-item-name"><a href="javascript:;">
+          <label>北京</label>
+          <span>：平仄有味，饱尝北国深秋</span></a><span> </span> </span> </li>
+        <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+          <label>西安</label>
+          <span>：寻一场千秋帝王梦</span></a><span> </span> </span> </li>
+        <li class="clrfix"><span class="mod-fList-item-name">
+          <label>珠江南田温泉</label>
+          <a href="javascript:;"><span>：清澈见底，健康养生</span></a><span> </span> </span> </li>
+        <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+          <label>永定土楼</label>
+          <span>：观独特建筑，品客家风情</span></a><span> </span> </span> </li>
+      </ul>
+    </div>
+    <div class="mod-fList-item_right">
+      <p class="mod-fList-item-title">海外热门目的地</p>
+      <ul>
+        <li> <span class="mod-fList-item-name"><a href="javascript:;">
+          <label>罗瓦涅米</label>
+          <span>：驾着驯鹿追极光</span></a><span> </span> </span> </li>
+        <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+          <label>马六甲</label>
+          <span>：世界遗产，海上生命线</span></a><span> </span> </span> </li>
+        <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+          <label>济州岛</label>
+          <span>：蜜月之岛，东方夏威夷</span></a><span> </span> </span> </li>
+        <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+          <label>红沙丘</label>
+          <span>：蓝天红土，滑沙观海</span></a><span> </span> </span> </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="mod-home-travel_two">
+  <div class="mod-home-travel_left"><a href="javascript:;"><img src="images/5147c86e5bd1f837.jpg" alt="&lt;" width="435" height="332" /></a> </div>
+  <div class="mod-home-travel_right">
+    <div class="mod-home-travel_right_one"><a href="javascript:;"><img src="images/fbc60a82d3764d37.jpg" width="240" height="158" /></a></div>
+    <div class="mod-home-travel_right_two"><a href="javascript:;"><img src="images/b70e650e3534a37.jpg" width="240" height="158" /></a></div>
+    <div class="mod-home-travel_right_three"><a href="javascript:;"><img src="images/a289750e8f7fef37.jpg" width="240" height="158" /></a></div>
+    <div class="mod-home-travel_right_four"><a href="javascript:;"><img src="images/6a4ed393f3049f37.jpg" width="240" height="158" /></a></div>
+  </div>
+  <div class="clr"></div>
+  <div class="mod-home-travel_bottom">
+    <div class="mod-fList-item">
+      <p class="mod-fList-item-title">国内热门目的地</p>
+      <ul>
+        <li> <span class="mod-fList-item-name"><a href="javascript:;">
+          <label>雾凇岛</label>
+          <span>：江风佛银丝，寒冬赏落花</span></a><span> </span> </span> </li>
+        <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+          <label>长白山</label>
+          <span>：北国大地上的一幅水墨画</span></a><span> </span> </span> </li>
+        <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+          <label>北极村</label>
+          <span>：边陲古镇，在天边，一束极光</span></a><span> </span> </span> </li>
+        <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+          <label>峨眉山</label>
+          <span>：演绎天地间至美的灵秀</span></a><span> </span> </span> </li>
+      </ul>
+    </div>
+    <div class="mod-fList-item_right">
+      <p class="mod-fList-item-title">海外热门目的地</p>
+      <ul>
+        <li> <span class="mod-fList-item-name"><a href="javascript:;">
+          <label>拉普兰</label>
+          <span>：圣诞老人的童话世界</span></a><span> </span> </span> </li>
+        <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+          <label>温哥华</label>
+          <span>：看雪花飘零，一览银白世界</span></a><span> </span> </span> </li>
+        <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+          <label>札幌</label>
+          <span>：迷醉在流光溢彩的雪祭盛典中</span></a><span> </span> </span> </li>
+        <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+          <label>瑞士</label>
+          <span>：在雪域列车上，感受冬日奢华浪漫</span></a><span> </span> </span> </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="mod-home-travel_three">
+  <div class="mod-home-travel_left"><a href="javascript:;"><img src="images/24ee7cd702141237.jpg" alt="&lt;" width="435" height="332" /></a> </div>
+  <div class="mod-home-travel_right">
+    <div class="mod-home-travel_right_one"><a href="javascript:;"><img src="images/417b3015097b7637.jpg" width="240" height="158" /></a></div>
+    <div class="mod-home-travel_right_two"><a href="javascript:;"><img src="images/cb8496700917dd37.jpg" width="240" height="158" /></a></div>
+    <div class="mod-home-travel_right_three"><a href="javascript:;"><img src="images/3143d0cb90ba4b37.jpg" width="240" height="158" /></a></div>
+    <div class="mod-home-travel_right_four"><a href="javascript:;"><img src="images/8fff2332dff679ec90.jpg" width="240" height="160" /></a></div>
+  </div>
+  <div class="clr"></div>
+  <div class="mod-home-travel_bottom">
+    <div class="mod-fList-item">
+      <p class="mod-fList-item-title">国内热门目的地</p>
+      <ul>
+        <li> <span class="mod-fList-item-name"><a href="javascript:;">
+          <label>长隆</label>
+          <span>：去长隆，与活宝动物奇妙邂逅。</span></a><span> </span> </span> </li>
+        <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+          <label>大熊猫基地</label>
+          <span>：滚滚来袭，萌化你的心。</span></a><span> </span> </span> </li>
+        <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+          <label>三亚</label>
+          <span>：南国之城，梦想的度假天堂。</span></a><span> </span> </span> </li>
+        <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+          <label>台北</label>
+          <span>：集台湾人文与地景之大成。</span></a><span> </span> </span> </li>
+      </ul>
+    </div>
+    <div class="mod-fList-item_right">
+      <p class="mod-fList-item-title">海外热门目的地</p>
+      <ul>
+        <li> <span class="mod-fList-item-name"><a href="javascript:;">
+          <label>马尔代夫</label>
+          <span>：马尔代夫，与世隔绝的世外桃源。</span></a><span> </span> </span> </li>
+        <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+          <label>新加坡</label>
+          <span>：“花园之都”融合东西文化精粹。</span></a><span> </span> </span> </li>
+        <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+          <label>札幌</label>
+          <span>：迷醉在流光溢彩的雪祭盛典中</span></a><span> </span> </span> </li>
+        <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+          <label>瑞士</label>
+          <span>：在雪域列车上，感受冬日奢华浪漫</span></a><span> </span> </span> </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="mod-home-travel_four">
+  <div class="mod-home-travel_left"><a href="javascript:;"><img src="images/fc037ec0f916c5db.jpg" alt="&lt;" width="435" height="332" /></a> </div>
+  <div class="mod-home-travel_right">
+    <div class="mod-home-travel_right_one"><a href="javascript:;"><img src="images/a34b8e5282a8a7db.jpg" width="240" height="158" /></a></div>
+    <div class="mod-home-travel_right_two"><a href="javascript:;"><img src="images/52ccc14c03dde4db.jpg" width="240" height="158" /></a></div>
+    <div class="mod-home-travel_right_three"><a href="javascript:;"><img src="images/75fa54e5c251fdb.jpg" width="240" height="158" /></a></div>
+    <div class="mod-home-travel_right_four"><a href="javascript:;"><img src="images/f7f13198395e9adb.jpg" width="240" height="158" /></a></div>
+  </div>
+  <div class="clr"></div>
+  <div class="mod-home-travel_bottom">
+    <div class="mod-fList-item">
+      <p class="mod-fList-item-title">国内热门目的地</p>
+      <ul>
+        <li> <span class="mod-fList-item-name"><a href="javascript:;">
+          <label>若尔盖</label>
+          <span>："风姿绰约，款款而来" </span></a><span> </span> </span> </li>
+        <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+          <label>敦煌</label>
+          <span>：丝绸之路上的“璀璨明珠”</span></a><span> </span> </span> </li>
+        <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+          <label>呼伦贝尔</label>
+          <span>：风吹草低见牛羊，草原游!</span></a><span> </span> </span> </li>
+        <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+          <label>青海湖</label>
+          <span>：“七月盛夏，油菜花开”</span></a><span> </span> </span> </li>
+      </ul>
+    </div>
+    <div class="mod-fList-item_right">
+      <p class="mod-fList-item-title">海外热门目的地</p>
+      <ul>
+        <li> <span class="mod-fList-item-name"><a href="javascript:;">
+          <label>济州岛</label>
+          <span>：去韩国夏威夷来场免签之旅</span></a><span> </span> </span> </li>
+        <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+          <label>沙巴</label>
+          <span>：在仙本那潜听海呤，看海上吉普赛人</span></a><span> </span> </span> </li>
+        <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+          <label>北海道</label>
+          <span>：漫游“花花世界”</span></a><span> </span> </span> </li>
+        <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+          <label> 冰岛</label>
+          <span>：火山&冰川，演绎一首冰与火之歌。</span></a><span> </span> </span> </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+<!--旅游攻略结束--> 
+<!--骆驼书--><div class="plan">
+<div class="plan_in"> <span class="travel">驼骆书</span> <span class="guide">读驼骆书，行万里路</span> </div>
+<div class="plan_nav">
+  <ul>
+    <li class="plan_five" style="width:40px"; onmouseover="plan5()" ><a href="javascript:;">专题</a></li>
+    <li class="plan_six" style="width:40px;" onmouseover="plan6()"><a href="javascript:;">亚洲</a></li>
+    <li class="plan_seven" style="width:40px;" onmouseover="plan7()"><a href="javascript:;">欧洲</a></li>
+    <li class="plan_eight" style="width:40px;" onmouseover="plan8()"><a href="javascript:;">北美洲</a></li>
+    <li class="plan_nine" style="width:40px;" onmouseover="plan9()"><a href="javascript:;">大洋洲</a></li>
+  </ul>
+  <div class="plan_nav_right"> <span><a href="javascript:;">更多&nbsp;&nbsp;></a></span> </div>
+</div>
+<div class="mod-home-travel-front" style="display:block">
+  <div class="books-ctn" data-panel="0" style="display:block;">
+    <div class="front-img"><img src="images/front-theme.jpg" width="178" height="340" /> </div>
+    <div class="book-img" onmouseover="bg1()" onmouseout="bgout1()"> <img src="images/cover300_9fbbf0c1.jpg" width="240" height="340" />
+      <div class="book-detail-bg-one" style="display:none" ></div>
+      <div class="book-detail-one" style="display:none;">
+        <div class="content">
+          <div class="name-zh">首尔购物</div>
+          <div class="name-en">Shopping in Seoul</div>
+          <div class="bar"></div>
+          <div class="info"> 作者：修菱 冷钢<br>
+            更新时间: 2015-01-20 </div>
+        </div>
+      </div>
+    </div>
+    <div class="book-img"  onmouseover="bg2()" onmouseout="bgout2()"> <img src="images/cover300_195528ae.jpg" width="240" height="340" />
+      <div class="book-detail-bg-two" style="display:none" onmouseover="bg2()"></div>
+      <div class="book-detail-two" style="display:none;" onmouseover="bg2()">
+        <div class="content">
+          <div class="name-zh">首尔购物</div>
+          <div class="name-en">Shopping in Seoul</div>
+          <div class="bar"></div>
+          <div class="info"> 作者：修菱 冷钢<br>
+            更新时间: 2015-01-20 </div>
+        </div>
+      </div>
+    </div>
+    <div class="book-img" style="margin-right:inherit;"  onmouseover="bg3()" onmouseout="bgout3()"> <img src="images/cover300_c323c5e4.jpg" width="240" height="340" />
+      <div class="book-detail-bg-three" style="display:none" onmouseover="bg3()"></div>
+      <div class="book-detail-three" style="display:none;" onmouseover="bg3()">
+        <div class="content">
+          <div class="name-zh">首尔购物</div>
+          <div class="name-en">Shopping in Seoul</div>
+          <div class="bar"></div>
+          <div class="info"> 作者：修菱 冷钢<br>
+            更新时间: 2015-01-20 </div>
+        </div>
+      </div>
+    </div>
+    <div class="clr"></div>
+    <div class="mod-home-travel_bottom">
+      <div class="mod-fList-item">
+        <p class="mod-fList-item-title" style="border-left:none;">热门出境骆驼书</p>
+        <ul style="border:none;">
+          <li> <span class="mod-fList-item-name"><a href="javascript:;">
+            <label>日本花见</label>
+            <span>：烂漫春光，赏尽樱吹雪</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>素可泰</label>
+            <span>：承载泰国寺庙文化的王朝古都</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>芭提雅</label>
+            <span>：风光旖旎的东方夏威夷</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>胡志明市</label>
+            <span>：湄公河上风情浪漫的明珠</span></a><span> </span> </span> </li>
+        </ul>
+      </div>
+      <div class="mod-fList-item_right">
+        <p class="mod-fList-item-title" style=" border-left:none;">热门海岛骆驼书</p>
+        <ul style="border:none;">
+          <li> <span class="mod-fList-item-name"><a href="javascript:;">
+            <label>甲米</label>
+            <span>：诗情画意、宛如天堂秘境的热带半岛</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>巴厘岛</label>
+            <span>：极具人文&热带风情的度假天堂</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>苏梅岛</label>
+            <span>：拒绝好莱坞选景荣耀的纯天然海岛</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>毛里求斯</label>
+            <span>：印度洋的珍珠，欧洲的后花园</span></a><span> </span> </span> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mod-home-travel-front-two" style="display:none;">
+  <div class="books-ctn" data-panel="0" style="display:block;">
+    <div class="front-img"><img src="images/front-asia.png" width="178" height="340" /> </div>
+    <div class="book-img"  onmouseover="bg4()" onmouseout="bgout4()"> <img src="images/cover300_dfc26b7c.jpg" width="240" height="340" />
+      <div class="book-detail-bg-four" style="display:none" onmouseover="bg4()"></div>
+      <div class="book-detail-four" style="display:none;" onmouseover="bg4()">
+        <div class="content">
+          <div class="name-zh">首尔购物</div>
+          <div class="name-en">Shopping in Seoul</div>
+          <div class="bar"></div>
+          <div class="info"> 作者：修菱 冷钢<br>
+            更新时间: 2015-01-20 </div>
+        </div>
+      </div>
+    </div>
+    <div class="book-img"  onmouseover="bg5()" onmouseout="bgout5()"> <img src="images/cover300_b033c28c.jpg" width="240" height="340" />
+      <div class="book-detail-bg-five" style="display:none" onmouseover="bg5()"></div>
+      <div class="book-detail-five" style="display:none;" onmouseover="bg5()">
+        <div class="content">
+          <div class="name-zh">首尔购物</div>
+          <div class="name-en">Shopping in Seoul</div>
+          <div class="bar"></div>
+          <div class="info"> 作者：修菱 冷钢<br>
+            更新时间: 2015-01-20 </div>
+        </div>
+      </div>
+    </div>
+    <div class="book-img" style="margin-right:inherit;"  onmouseover="bg6()" onmouseout="bgout6()"> <img src="images/cover300_b4ec5188.jpg" width="240" height="340" />
+      <div class="book-detail-bg-six" style="display:none" onmouseover="bg6()"></div>
+      <div class="book-detail-six" style="display:none;" onmouseover="bg6()">
+        <div class="content">
+          <div class="name-zh">首尔购物</div>
+          <div class="name-en">Shopping in Seoul</div>
+          <div class="bar"></div>
+          <div class="info"> 作者：修菱 冷钢<br>
+            更新时间: 2015-01-20 </div>
+        </div>
+      </div>
+    </div>
+    <div class="clr"></div>
+    <div class="mod-home-travel_bottom">
+      <div class="mod-fList-item">
+        <p class="mod-fList-item-title" style="border-left:none;">热门出境骆驼书</p>
+        <ul style="border:none;">
+          <li> <span class="mod-fList-item-name"><a href="javascript:;">
+            <label>日本花见</label>
+            <span>：烂漫春光，赏尽樱吹雪</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>素可泰</label>
+            <span>：承载泰国寺庙文化的王朝古都</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>芭提雅</label>
+            <span>：风光旖旎的东方夏威夷</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>胡志明市</label>
+            <span>：湄公河上风情浪漫的明珠</span></a><span> </span> </span> </li>
+        </ul>
+      </div>
+      <div class="mod-fList-item_right">
+        <p class="mod-fList-item-title" style=" border-left:none;">热门海岛骆驼书</p>
+        <ul style="border:none;">
+          <li> <span class="mod-fList-item-name"><a href="javascript:;">
+            <label>甲米</label>
+            <span>：诗情画意、宛如天堂秘境的热带半岛</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>巴厘岛</label>
+            <span>：极具人文&热带风情的度假天堂</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>苏梅岛</label>
+            <span>：拒绝好莱坞选景荣耀的纯天然海岛</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>毛里求斯</label>
+            <span>：印度洋的珍珠，欧洲的后花园</span></a><span> </span> </span> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mod-home-travel-front-three" style=" display:none;">
+  <div class="books-ctn" data-panel="0" style="display:block;">
+    <div class="front-img"><img src="images/front-europe.png" width="178" height="340" /> </div>
+    <div class="book-img"  onmouseover="bg7()" onmouseout="bgout7()"> <img src="images/cover300_660a2355.jpg" width="240" height="340" />
+      <div class="book-detail-bg-seven" style="display:none" onmouseover="bg7()"></div>
+      <div class="book-detail-seven" style="display:none;" onmouseover="bg7()">
+        <div class="content">
+          <div class="name-zh">首尔购物</div>
+          <div class="name-en">Shopping in Seoul</div>
+          <div class="bar"></div>
+          <div class="info"> 作者：修菱 冷钢<br>
+            更新时间: 2015-01-20 </div>
+        </div>
+      </div>
+    </div>
+    <div class="book-img"  onmouseover="bg8()" onmouseout="bgout8()"> <img src="images/cover300_8633f1ca.jpg" width="240" height="340" />
+      <div class="book-detail-bg-eight" style="display:none" onmouseover="bg8()"></div>
+      <div class="book-detail-eight" style="display:none;" onmouseover="bg8()">
+        <div class="content">
+          <div class="name-zh">首尔购物</div>
+          <div class="name-en">Shopping in Seoul</div>
+          <div class="bar"></div>
+          <div class="info"> 作者：修菱 冷钢<br>
+            更新时间: 2015-01-20 </div>
+        </div>
+      </div>
+    </div>
+    <div class="book-img" style="margin-right:inherit;"  onmouseover="bg9()" onmouseout="bgout9()"> <img src="images/cover300_ba826e7a.jpg" width="240" height="340" />
+      <div class="book-detail-bg-nine" style="display:none" onmouseover="bg9()"></div>
+      <div class="book-detail-nine" style="display:none;" onmouseover="bg9()">
+        <div class="content">
+          <div class="name-zh">首尔购物</div>
+          <div class="name-en">Shopping in Seoul</div>
+          <div class="bar"></div>
+          <div class="info"> 作者：修菱 冷钢<br>
+            更新时间: 2015-01-20 </div>
+        </div>
+      </div>
+    </div>
+    <div class="clr"></div>
+    <div class="mod-home-travel_bottom">
+      <div class="mod-fList-item">
+        <p class="mod-fList-item-title" style="border-left:none;">热门出境骆驼书</p>
+        <ul style="border:none;">
+          <li> <span class="mod-fList-item-name"><a href="javascript:;">
+            <label>日本花见</label>
+            <span>：烂漫春光，赏尽樱吹雪</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>素可泰</label>
+            <span>：承载泰国寺庙文化的王朝古都</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>芭提雅</label>
+            <span>：风光旖旎的东方夏威夷</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>胡志明市</label>
+            <span>：湄公河上风情浪漫的明珠</span></a><span> </span> </span> </li>
+        </ul>
+      </div>
+      <div class="mod-fList-item_right">
+        <p class="mod-fList-item-title" style=" border-left:none;">热门海岛骆驼书</p>
+        <ul style="border:none;">
+          <li> <span class="mod-fList-item-name"><a href="javascript:;">
+            <label>甲米</label>
+            <span>：诗情画意、宛如天堂秘境的热带半岛</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>巴厘岛</label>
+            <span>：极具人文&热带风情的度假天堂</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>苏梅岛</label>
+            <span>：拒绝好莱坞选景荣耀的纯天然海岛</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>毛里求斯</label>
+            <span>：印度洋的珍珠，欧洲的后花园</span></a><span> </span> </span> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mod-home-travel-front-four" style="display:none;">
+  <div class="books-ctn" data-panel="0" style="display:block;">
+    <div class="front-img"><img src="images/front-america.png" width="178" height="340" /> </div>
+    <div class="book-img"  onmouseover="bg10()" onmouseout="bgout10()"> <img src="images/cover300_c0e055c1.jpg" width="240" height="340" />
+      <div class="book-detail-bg-ten" style="display:none" onmouseover="bg10()"></div>
+      <div class="book-detail-ten" style="display:none;" onmouseover="bg10()">
+        <div class="content">
+          <div class="name-zh">首尔购物</div>
+          <div class="name-en">Shopping in Seoul</div>
+          <div class="bar"></div>
+          <div class="info"> 作者：修菱 冷钢<br>
+            更新时间: 2015-01-20 </div>
+        </div>
+      </div>
+    </div>
+    <div class="book-img"  onmouseover="bg11()" onmouseout="bgout11()"> <img src="images/cover300_9de5d12e.jpg" width="240" height="340" />
+      <div class="book-detail-bg-eleven" style="display:none" onmouseover="bg11()"></div>
+      <div class="book-detail-eleven" style="display:none;" onmouseover="bg11()">
+        <div class="content">
+          <div class="name-zh">首尔购物</div>
+          <div class="name-en">Shopping in Seoul</div>
+          <div class="bar"></div>
+          <div class="info"> 作者：修菱 冷钢<br>
+            更新时间: 2015-01-20 </div>
+        </div>
+      </div>
+    </div>
+    <div class="book-img" style="margin-right:inherit;"  onmouseover="bg12()" onmouseout="bgout12()"> <img src="images/cover300_3bb6cb35.jpg" width="240" height="340" />
+      <div class="book-detail-bg-twelve" style="display:none" ></div>
+      <div class="book-detail-twelve" style="display:none;">
+        <div class="content">
+          <div class="name-zh">首尔购物</div>
+          <div class="name-en">Shopping in Seoul</div>
+          <div class="bar"></div>
+          <div class="info"> 作者：修菱 冷钢<br>
+            更新时间: 2015-01-20 </div>
+        </div>
+      </div>
+    </div>
+    <div class="clr"></div>
+    <div class="mod-home-travel_bottom">
+      <div class="mod-fList-item">
+        <p class="mod-fList-item-title" style="border-left:none;">热门出境骆驼书</p>
+        <ul style="border:none;">
+          <li> <span class="mod-fList-item-name"><a href="javascript:;">
+            <label>日本花见</label>
+            <span>：烂漫春光，赏尽樱吹雪</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>素可泰</label>
+            <span>：承载泰国寺庙文化的王朝古都</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>芭提雅</label>
+            <span>：风光旖旎的东方夏威夷</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>胡志明市</label>
+            <span>：湄公河上风情浪漫的明珠</span></a><span> </span> </span> </li>
+        </ul>
+      </div>
+      <div class="mod-fList-item_right">
+        <p class="mod-fList-item-title" style=" border-left:none;">热门海岛骆驼书</p>
+        <ul style="border:none;">
+          <li> <span class="mod-fList-item-name"><a href="javascript:;">
+            <label>甲米</label>
+            <span>：诗情画意、宛如天堂秘境的热带半岛</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>巴厘岛</label>
+            <span>：极具人文&热带风情的度假天堂</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>苏梅岛</label>
+            <span>：拒绝好莱坞选景荣耀的纯天然海岛</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>毛里求斯</label>
+            <span>：印度洋的珍珠，欧洲的后花园</span></a><span> </span> </span> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mod-home-travel-front-five" style="display:none;">
+  <div class="books-ctn" data-panel="0" style="display:block;">
+    <div class="front-img"><img src="images/front-oceania.png" width="178" height="340" /> </div>
+    <div class="book-img"  onmouseover="bg13()" onmouseout="bgout13()"> <img src="images/cover300_94cfa1fc.jpg" width="240" height="340" />
+      <div class="book-detail-bg-thirteen" style="display:none"></div>
+      <div class="book-detail-thirteen" style="display:none;" >
+        <div class="content">
+          <div class="name-zh">首尔购物</div>
+          <div class="name-en">Shopping in Seoul</div>
+          <div class="bar"></div>
+          <div class="info">作者：修菱 冷钢<br>
+            更新时间: 2015-01-20 </div>
+        </div>
+      </div>
+    </div>
+    <div class="book-img"  onmouseover="bg14()" onmouseout="bgout14()"> <img src="images/cover300_32c617ae.jpg" width="240" height="340" />
+      <div class="book-detail-bg-fourteen" style="display:none"></div>
+      <div class="book-detail-fourteen" style="display:none;">
+        <div class="content">
+          <div class="name-zh">首尔购物</div>
+          <div class="name-en">Shopping in Seoul</div>
+          <div class="bar"></div>
+          <div class="info">作者：修菱 冷钢<br>
+            更新时间: 2015-01-20</div>
+        </div>
+      </div>
+    </div>
+    <div class="book-img" style="margin-right:inherit;"  onmouseover="bg15()" onmouseout="bgout15()"> <img src="images/cover300_931ef8e8.jpg" width="240" height="340" />
+      <div class="book-detail-bg-fiveteen" style="display:none"></div>
+      <div class="book-detail-fiveteen" style="display:none;">
+        <div class="content">
+          <div class="name-zh">首尔购物</div>
+          <div class="name-en">Shopping in Seoul</div>
+          <div class="bar"></div>
+          <div class="info"> 作者：修菱 冷钢<br>
+            更新时间: 2015-01-20 </div>
+        </div>
+      </div>
+    </div>
+    <div class="clr"></div>
+    <div class="mod-home-travel_bottom">
+      <div class="mod-fList-item">
+        <p class="mod-fList-item-title" style="border-left:none;">热门出境骆驼书</p>
+        <ul style="border:none;">
+          <li> <span class="mod-fList-item-name"><a href="javascript:;">
+            <label>日本花见</label>
+            <span>：烂漫春光，赏尽樱吹雪</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>素可泰</label>
+            <span>：承载泰国寺庙文化的王朝古都</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>芭提雅</label>
+            <span>：风光旖旎的东方夏威夷</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>胡志明市</label>
+            <span>：湄公河上风情浪漫的明珠</span></a><span> </span> </span> </li>
+        </ul>
+      </div>
+      <div class="mod-fList-item_right">
+        <p class="mod-fList-item-title" style=" border-left:none;">热门海岛骆驼书</p>
+        <ul style="border:none;">
+          <li> <span class="mod-fList-item-name"><a href="javascript:;">
+            <label>甲米</label>
+            <span>：诗情画意、宛如天堂秘境的热带半岛</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>巴厘岛</label>
+            <span>：极具人文&热带风情的度假天堂</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>苏梅岛</label>
+            <span>：拒绝好莱坞选景荣耀的纯天然海岛</span></a><span> </span> </span> </li>
+          <li class="clrfix"> <span class="mod-fList-item-name"> <a href="javascript:;">
+            <label>毛里求斯</label>
+            <span>：印度洋的珍珠，欧洲的后花园</span></a><span> </span> </span> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!--骆驼书结束-->
+    <!--zmh部分结束-->
+    </div>
+    
+    
+    <!--左半部分-->
+	</div>
+    <!--右半部分-->
+    <div class="preference-r">
+        <div class="preference-r-notice">
+            <div class="preference-r-notice-top">公告</div>
+            <div class="preference-r-notice-m">
+                <p>反网络诈骗专栏</p>
+                <p>认证导游入驻去哪儿网</p>
+                <p>去哪儿网已通过支付卡产业数据安全标准</p>
+            </div>
+            <div class="preference-r-notice-b">
+                <div class="preference-r-notice-b-i">
+                <b>去哪儿网客服电话</b><span class="service"></span><span class="right-f">提供24小时服务</span>
+                </div>
+                <div class="preference-r-notice-b-i">
+                	<span class="left">国内客服电话</span><span class="right">95117</span>
+                </div>
+                <div class="preference-r-notice-b-i">
+                <span class="left">国际客服电话</span><span class="right">+(8610)82872677</span>
+                </div>
+                <div class="preference-r-notice-b-i">
+                <span class="left">酒店预定热线</span><span class="right">400-666-3223</span>
+                </div>
+            </div>
+        </div>
+        <div class="preference-r-advertisement">
+            <div class="preference-r-advertisement-top">
+            	去哪儿网广告推荐
+            	<div class="preference-r-advertisement-m">
+            			<img src="images/Advertisement-two.jpg" width="220px" alt="" />
+            			<div class="preference-r-advertisement-m-Close" onclick="deladv()">
+            				<img src="images/Advertisement-XX-t.png" width="15px" height="12px" alt="" />
+            			</div>
+            	</div>
+            </div>
+            <div class="preference-r-advertisement-tips">
+                <div class="preference-r-advertisement-tips-title">
+                    旅行小贴士
+                </div>
+                <div class="preference-r-advertisement-tips-m">
+                	<p><a href="#">去哪儿网郑重承诺"诚信经营 放心消费"</a></p>
+                	<p><a href="#">去哪儿网郑重承诺"诚信经营 放心消费"</a></p>
+                	<p><a href="#">去哪儿网郑重承诺"诚信经营 放心消费"</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--右半部分-->
+
+<!--特惠页面部分结束-->
+
+</div>
+</div>
+<div class="clr"></div>
+<div class="foot">
+    	<div class="foot_nav">
+        	<div class="foot_nav_in_left">
+       	    <img src="images/foot_font.png" width="331" height="138" />
+             <div class="foot_box" id="txt"><a href="javascript:;">立即下载</a></div>
+            </div>
+            <div class="foot_nav_in_right"><img src="images/foot_phone.png" width="266" height="195" /></div>
+        </div>
+    </div>
+    <div class="clr"></div>
+	<div class="foot_difang">
+    <dl>
+    <dt>度假</dt>
+    <dd>九寨沟旅游</dd>
+    <dd>南京旅游</dd>
+    <dd>武汉旅游</dd>
+    <dd>普吉岛旅游</dd>
+    <dd>西安旅游</dd>
+    <dd>北京旅游</dd>
+    <dd>云南旅游</dd>
+    <dd>杭州旅游</dd>
+    <dd>张家界旅游</dd>
+    <dd>香港旅游</dd>
+    <dd>台湾旅游</dd>
+    <dd>西藏旅游</dd>
+    <dd>成都旅游</dd>
+    <dd>三亚旅游</dd>
+    <dd>苏州旅游</dd>
+    <dd>厦门旅游</dd>
+    <dd>青岛旅游</dd>
+    <dd>韩国旅游</dd>
+    <dd>上海旅游</dd>
+    <dd>西塘旅游</dd>
+    <dd>乌镇旅游</dd>
+    <dd>千岛湖旅游</dd>
+    <dd>婺源旅游</dd>
+    <dd>巴厘岛旅游</dd>
+    <dd>鼓浪屿旅游</dd>
+    <dd>天津旅游</dd>
+    </dl>
+    </div>
+<div class="foot_difang2">
+    <dl>
+    <dt>攻略</dt>
+    <dd>九寨沟攻略</dd>
+    <dd>南京攻略</dd>
+    <dd>武汉攻略</dd>
+    <dd>普吉岛攻略</dd>
+    <dd>西安攻略</dd>
+    <dd>北京攻略</dd>
+    <dd>云南攻略</dd>
+    <dd>杭州攻略</dd>
+    <dd>张家界攻略</dd>
+    <dd>香港攻略</dd>
+    <dd>台湾攻略</dd>
+    <dd>西藏攻略</dd>
+    <dd>成都攻略</dd>
+    <dd>三亚攻略</dd>
+    <dd>苏州攻略</dd>
+    <dd>厦门攻略</dd>
+    <dd>青岛攻略</dd>
+    <dd>韩国攻略</dd>
+    <dd>上海攻略</dd>
+    <dd>西塘攻略</dd>
+    <dd>乌镇攻略</dd>
+    <dd>千岛湖攻略</dd>
+    <dd>婺源攻略</dd>
+    <dd>巴厘岛攻略</dd>
+    <dd>鼓浪屿攻略</dd>
+    <dd>天津攻略</dd>
+    </dl>
+    </div>
+<div class="foot_beian">
+  <p>关于Qunar.com
+    |投资者关系|酒店分销|业务合作|加入我们|"严重违规失信"专项整治举报|安全中心|星骆驼公益|About Us<br />
+    Copyright ©2017 Qunar.com京公网安备110108901530京ICP备05021087号营业执照信息保险经纪资质(京)-非经营性-2016-0110去哪儿网客服电话95117</p>
+<img src="images/foot.png" width="514" height="47" /> </div>
+<!--底部结束-->
+</body>
+
+<script src="js/1.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/travel.js"></script>
+<script type="text/javascript" src="laydate.dev.js">
+
+</script>
+<script>
+//酒店内容显示的surprise
+function surprise(){
+	$('.block2').children().fadeIn(3000);
+	}
+//订单order下拉列表的显示和隐藏
+$('.top_order').mouseover(function() {
+            $('.droplist').css('display','block')
+			});
+$('.top_order').mouseout(function() {
+            $('.droplist').css('display','none')
+			});
+//实现下拉列表鼠标可以悬停
+$('.droplist').hover(function(){
+$(this).show();
+},function(){
+$(this).hide();
+});
+//国内机票 和 国际港澳台标签样式切换
+	function changgenav1(){
+			$('.blo_nav1_li1').css({'border-bottom':'2px solid #098cb5','font-weight':'bold',});
+			$('.blo_nav1_li1').children().css({'color':'black'});
+			$('.blo_nav1_li2').css('border-bottom','none');
+			$('.blo_nav1_li2').css('font-weight','normal');
+			$('.blo_nav1_li2').children().css({'color':'#999'});
+			$('.blo_in1').css('display','block');
+			$('.blo_in2').css('display','none');
+		}
+	function changgenav2(){
+			$('.blo_nav1_li2').css({'border-bottom':'2px solid #098cb5','font-weight':'bold',});
+			$('.blo_nav1_li2').children().css({'color':'black'});
+			$('.blo_nav1_li1').css('border-bottom','none');
+			$('.blo_nav1_li1').css('font-weight','normal');
+			$('.blo_nav1_li1').children().css({'color':'#999'});
+			$('.blo_in1').css('display','none');
+			$('.blo_in2').css('display','block');
+			$('.blo_in2_con').css('display','block');
+			$('.blo_in_intel_con').css('display','none');
+			$('#doubleway').checked=true;
+		}
+//显示当前日期
+var d = new Date();
+var now = d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();
+$('.ticket_time').val(now);
+
+//换 图片替换
+function picchange(){
+	$('.change1').css('display','none');
+	$('.change2').css('display','block');
+	}
+function picreturn(){
+	$('.change1').css('display','block');
+	$('.change2').css('display','none');
+	}
+
+//立即搜索按钮 背景变色
+function searchchange(){
+	$('.search').css('background','#ff752b')
+	}
+function searchreturn(){
+	$('.search').css('background','#fe5722')
+	}
+/第四个文本框变色/
+var tat = d.getFullYear()+"-"+(d.getMonth()+1)+"-"+(d.getDate()+2);/显示时间为后天/
+function text4change(){
+  $(".text_l").css({"border":"1px solid #ccc","border-right":"none",'background':'white'});/左边边框变浓/
+  $(".text_l").children().css('color','#999');/子节点a字体颜色改变/
+  $(".ticket_time2").css({"border":"1px solid #ccc","border-left":"none"});/边框变浓/
+  $('.cai').css('display','block');/灰色彩色图片变换/
+  $('.hui').css('display','none');
+  $('.ticket_time2').val(tat);/显示时间/
+};
+
+function text4return(){
+		$("#text_l2").css({"border":"1px solid #e4e6e5","border-right":"none",'background':'#f5f5f5'});
+		$("#text_l2").children().css('color','#ccc');
+		$(".ticket_time2").css({"border":"1px solid #e4e6e5","border-left":"none"});
+		$('.cai').css('display','none');/灰色彩色图片变换/
+  		$('.hui').css('display','block');
+		$('.ticket_time2').val("");
+	}
+	
+/智能搜索界面显示/
+function intel_search(){
+		$('.blo_in_intel_con').css('display','block');
+		$('.blo_in2_con').css('display','none');
+	}
+/国际界面——单程/
+function singleway(){
+		$('.blo_in2_con').css('display','block');
+		$('.blo_in_intel_con').css('display','none');
+		$("#text_ltwo").css({"border":"1px solid #e4e6e5","border-right":"none",'background':'#f5f5f5'});
+		$("#text_ltwo").children().css('color','#ccc');
+		$("#double_time").css({"border":"1px solid #e4e6e5","border-left":"none"});
+		$('.cai').css('display','none');/灰色彩色图片变换/
+  		$('.hui').css('display','block');
+		$('#double_time').val("");
+	}
+/国际界面——往返/
+function doubleway(){
+		$('.blo_in2_con').css('display','block');
+		$('.blo_in_intel_con').css('display','none');
+		$("#text_ltwo").css({"border":"1px solid #ccc","border-right":"none",'background':'#fff'});
+		$("#text_ltwo").children().css('color','#999');
+		$(".ticket_time2").css({"border":"1px solid #ccc","border-left":"none"});
+		$('.cai').css('display','block');/灰色彩色图片变换/
+  		$('.hui').css('display','none');
+		$('.ticket_time2').val(tat);
+	}
+$('#double_time').val(tat);
+
+//block左导航
+$('#sec_l_ul').find('li').click(function(){
+		$(this).attr('class','li_beifen1');
+		$(this).siblings().attr('class','li_beifen2');
+		$('.li_air').attr('class','li_beifen2');
+	})
+
+		
+function blo1(){
+		$('.block1').css('display','block');
+		$('.block2').css('display','none');
+		$('.block3').css('display','none');
+		$('.block4').css('display','none');
+		$('.block5').css('display','none');
+		$('.block6').css('display','none');
+		$('.block7').css('display','none');
+		$('.block8').css('display','none');
+	}
+function blo2(){
+		$('.block1').css('display','none');
+		$('.block2').css('display','block');
+		$('.block3').css('display','none');
+		$('.block4').css('display','none');
+		$('.block5').css('display','none');
+		$('.block6').css('display','none');
+		$('.block7').css('display','none');
+		$('.block8').css('display','none');
+		setTimeout(function(){$('.block2').children().fadeIn(8000)},3000);
+	}
+function blo3(){
+		$('.block1').css('display','none');
+		$('.block2').css('display','none');
+		$('.block3').css('display','block');
+		$('.block4').css('display','none');
+		$('.block5').css('display','none');
+		$('.block6').css('display','none');
+		$('.block7').css('display','none');
+		$('.block8').css('display','none');
+		$('.block3').children().fadeIn(8000);
+	}
+function blo4(){
+		$('.block1').css('display','none');
+		$('.block2').css('display','none');
+		$('.block3').css('display','none');
+		$('.block4').css('display','block');
+		$('.block5').css('display','none');
+		$('.block6').css('display','none');
+		$('.block7').css('display','none');
+		$('.block8').css('display','none');
+		$('.block4').children().fadeIn(8000);
+	}
+function blo5(){
+		$('.block1').css('display','none');
+		$('.block2').css('display','none');
+		$('.block3').css('display','none');
+		$('.block4').css('display','none');
+		$('.block5').css('display','block');
+		$('.block6').css('display','none');
+		$('.block7').css('display','none');
+		$('.block8').css('display','none');
+		$('.block5').children().fadeIn(8000);
+	}
+function blo6(){
+		$('.block1').css('display','none');
+		$('.block2').css('display','none');
+		$('.block3').css('display','none');
+		$('.block4').css('display','none');
+		$('.block5').css('display','none');
+		$('.block6').css('display','block');
+		$('.block7').css('display','none');
+		$('.block8').css('display','none');
+		$('.block6').children().fadeIn(10000);
+	}
+function blo7(){
+		$('.block1').css('display','none');
+		$('.block2').css('display','none');
+		$('.block3').css('display','none');
+		$('.block4').css('display','none');
+		$('.block5').css('display','none');
+		$('.block6').css('display','none');
+		$('.block7').css('display','block');
+		$('.block8').css('display','none');
+		$('.block7').children().fadeIn(10000);
+	}
+function blo8(){
+		$('.block1').css('display','none');
+		$('.block2').css('display','none');
+		$('.block3').css('display','none');
+		$('.block4').css('display','none');
+		$('.block5').css('display','none');
+		$('.block6').css('display','none');
+		$('.block7').css('display','none');
+		$('.block8').css('display','block');
+		$('.block8').children().fadeIn(10000);
+	}
+//日历控件的显示
+	laydate({
+
+            elem: '#rili1'
+
+        });
+	laydate({
+
+            elem: '#rili2'
+
+        });
+
+/左侧导航栏缓冲运动/
+/*window.onload=function(){
+var tmenu=document.getElementsByClassName('menu');
+tmenu.onmouseover=function(){
+	startmove()
+	}
+}*/
+var timer=null;
+var timer2=null;
+function startmove(){
+	clearInterval(timer);
+	clearInterval(timer2);
+	clearInterval(timer3);
+	clearInterval(timer4);
+	timer=setInterval(function(){
+		if($('.menu').offset().left==-36){
+			clearInterval(timer);
+		}
+		else{
+			$(".menu").css("left",$('.menu').offset().left-3+'px');
+			}
+		},30)
+			
+timer2=setInterval(function(){
+				if($('.icon_fold').offset().left==0){
+				clearInterval(timer2);
+				}
+				else{
+				$(".icon_fold").css("left",$('.icon_fold').offset().left+4+'px')}
+				},30)	
+}
+
+
+var timer3=null;
+var timer4=null;
+function startremove(){
+	clearInterval(timer);
+	clearInterval(timer2);
+	clearInterval(timer3);
+	clearInterval(timer4);
+	timer3=setInterval(function(){
+		if($('.icon_fold').offset().left==-56){
+			clearInterval(timer3);	
+		}
+		else{
+			$(".icon_fold").css("left",$('.icon_fold').offset().left-4+'px');
+			}
+		},30)	
+	timer4=setInterval(function(){
+				if($('.menu').offset().left==0){
+				clearInterval(timer4);
+				}
+				else{
+				$(".menu").css("left",$('.menu').offset().left+3+'px')}
+				},30)	
+}
+//左导航栏样式改变
+function peopleover(){
+		$('.mid_people').css('background','white');
+		$('.mid_people_icon').css('background-position','-18px 0px');
+	 	$('.mid_people_in').css('display','block')	
+		}
+function peopleout(){
+		$('.mid_people').css('background','none');
+		$('.mid_people_icon').css('background-position','0px 0px');
+		$('.mid_people_in').css('display','none')
+		}
+
+function mesover(){
+	$('.mid_message').css({'color':'#7c8994','background':'white'});
+	$('.mid_message_icon').css('background-position','-18px -16px');
+}
+function mesout(){
+	$('.mid_message').css({'color':'#fff','background':'none'});
+	$('.mid_message_icon').css('background-position','0px -16px');
+}
+function shopover(){
+	$('.mid_shop').css({'color':'#7c8994','background':'white'});
+	$('.mid_shop_icon').css('background-position','-18px -92px');
+}
+function shopout(){
+	$('.mid_shop').css({'color':'#fff','background':'none'});
+	$('.mid_shop_icon').css('background-position','0px -92px');
+}
+function monover(){
+	$('.mid_money').css({'color':'#7c8994','background':'white'});
+	$('.mid_money_icon').css('background-position','-18px -28px');
+}
+function monout(){
+	$('.mid_money').css({'color':'#fff','background':'none'});
+	$('.mid_money_icon').css('background-position','0px -28px');
+}
+function advover(){
+	$('.menu_advice').css({'color':'#7c8994','background':'white'});
+	$('.advice_icon').css('background-position','-18px -42px');
+}
+function advout(){
+	$('.menu_advice').css({'color':'#fff','background':'none'});
+	$('.advice_icon').css('background-position','0px -42px');
+}
+//左导航栏二维码的显示隐藏
+function codeover(){
+	$('.menu_qrcode').css({'color':'#7c8994','background':'white'});
+	$('.qrcode_icon').css('background-position','-18px -59px');
+	$('.erweima').css('display','block');/扫码二维码显示/
+}
+function codeout(){
+	$('.menu_qrcode').css({'color':'#fff','background':'none'});
+	$('.qrcode_icon').css('background-position','0px -59px');
+	$('.erweima').css('display','none');/扫码二维码消失/
+}
+//左侧导航置顶效果（显示、隐藏、页面置顶）
+$(function(){
+	$('.scroll_top').hide();
+	$('.scroll_top').click(function(){
+		$(window).scrollTop(0);
+		})
+$(window).scroll(function(){
+   if ($(window).scrollTop()>900){
+                    $(".scroll_top").fadeIn(1000)
+                }
+                else{
+                    $(".scroll_top").fadeOut(1000)
+                }
+				})
+})
+
+
+
+
+
+
+
+//czm js
+function hot1(){
+	$('.hotel_r1').css('display','block');	
+	$('.hotel_r2').css('display','none');	
+	$('.hotel_r3').css('display','none');	
+	$('.hotel_r4').css('display','none');	
+	$('.hot_1 a').css('color','#FFFFFF');
+	$('.hot_1 a').css('background-color','#00AFC7')
+	$('.hot_2 a').css('color','#000000');
+	$('.hot_2 a').css('background-color','#FFFFFF')
+	$('.hot_3 a').css('color','#000000');
+	$('.hot_3 a').css('background-color','#FFFFFF')
+	$('.hot_4 a').css('color','#000000');
+	$('.hot_4 a').css('background-color','#FFFFFF')
+}
+function hot2(){
+	$('.hotel_r1').css('display','none');	
+	$('.hotel_r2').css('display','block');	
+	$('.hotel_r3').css('display','none');	
+	$('.hotel_r4').css('display','none');
+	$('.hot_1 a').css('color','#000000');
+	$('.hot_1 a').css('background-color','#FFFFFF')
+	$('.hot_2 a').css('color','#FFFFFF');
+	$('.hot_2 a').css('background-color','#00AFC7')
+	$('.hot_3 a').css('color','#000000');
+	$('.hot_3 a').css('background-color','#FFFFFF')
+	$('.hot_4 a').css('color','#000000');
+	$('.hot_4 a').css('background-color','#FFFFFF')
+}
+function hot3(){
+	$('.hotel_r1').css('display','none');	
+	$('.hotel_r2').css('display','none');	
+	$('.hotel_r3').css('display','block');	
+	$('.hotel_r4').css('display','none');
+	$('.hot_1 a').css('color','#000000');
+	$('.hot_1 a').css('background-color','#FFFFFF')
+	$('.hot_2 a').css('color','#000000');
+	$('.hot_2 a').css('background-color','#FFFFFF')
+	$('.hot_3 a').css('color','#FFFFFF');
+	$('.hot_3 a').css('background-color','#00AFC7')
+	$('.hot_4 a').css('color','#000000');
+	$('.hot_4 a').css('background-color','#FFFFFF')
+}
+function hot4(){
+	$('.hotel_r1').css('display','none');	
+	$('.hotel_r2').css('display','none');	
+	$('.hotel_r3').css('display','none');	
+	$('.hotel_r4').css('display','block');
+	$('.hot_1 a').css('color','#000000');
+	$('.hot_1 a').css('background-color','#FFFFFF')
+	$('.hot_2 a').css('color','#000000');
+	$('.hot_2 a').css('background-color','#FFFFFF')
+	$('.hot_3 a').css('color','#000000');
+	$('.hot_3 a').css('background-color','#FFFFFF')
+	$('.hot_4 a').css('color','#FFFFFF');
+	$('.hot_4 a').css('background-color','#00AFC7')
+}
+</script>
+</html>
